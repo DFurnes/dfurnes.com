@@ -1,15 +1,3 @@
 paginate: 10
 exclude: ["README", "CNAME"]
 permalink: /blog/:year/:month/:day/:title
-
-portfolio:
-	eslc:
-		name: UConn ESLC
-		url: http://eslc.engr.uconn.edu/
-		date: December 2011
-		description: "As designer for the Engineering Student Leadership Council at UConn, I created a new logo and brand identity for the club, and created a matching website. I also made a MailChimp newsletter with a matching custom-designed theme to inform students of upcoming events and meetings."
-	open:
-		name: One Planet Education
-		url: http://beta.dfurnes.com/open/landing/
-		date: August 2011
-		description: "As a design intern for the One Planet Education Network, I created a landing page for customers interested in purchasing their first educational game. The signup form includes client-side verification of input, and automatically selects the customer's credit card type based on the typed number. It also uses <a href="http://en.wikipedia.org/wiki/Luhn_algorithm">Luhn's Algorithm</a> to help prevent typos when entering credit card numbers."
