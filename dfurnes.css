@@ -156,7 +156,7 @@ a.important:active {
 
 #menu a:hover {
   opacity: 0.8;
-  color: #787878;
+  color: #000;
 }
 
 #menu a.active {
