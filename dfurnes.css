@@ -90,6 +90,11 @@ a {
   border-bottom: 1px dotted #666666;
 }
 
+a img {
+  outline: 0;
+  border: none;
+}
+
 a.important {
   color: #333333;
   border-bottom: 1px dotted #333333;
@@ -152,6 +157,10 @@ a.important:active {
 
 .portfolio {
   background: url('images/portfolio.png') no-repeat 0 50% !important;
+}
+
+.blog {
+  background: url('images/blog.png') no-repeat 0 50% !important;
 }
 
 #menu a:hover {

@@ -1,3 +1,0 @@
-paginate: 10
-exclude: ["README", "CNAME"]
-permalink: /blog/:year/:month/:day/:title
