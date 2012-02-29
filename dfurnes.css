@@ -429,6 +429,10 @@ hr {
     display: none;
   }
   
+  .portfolio-link {
+    width: 272px;
+  }
+  
   .site a {
     display: block;
     width: 272px;
