@@ -462,10 +462,12 @@ hr {
 
   .me {
     background: url('images/me@2x.png') no-repeat 0 50% !important;
+    background-size: 26px 26px;
   }
   
   .portfolio {
     background: url('images/portfolio@2x.png') no-repeat 0 50% !important;
+    background-size: 26px 26px;
   }
 
 }
