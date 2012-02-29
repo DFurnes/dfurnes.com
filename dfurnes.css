@@ -451,3 +451,21 @@ hr {
 
 }
 
+
+/*	Overrides for iPhone 4 
+  and other high device-pixel-ratio devices
+  -----------------------------------------	*/
+
+@media 
+  only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (min-device-pixel-ratio: 2) {
+
+  .me {
+    background: url('images/me@2x.png') no-repeat 0 50% !important;
+  }
+  
+  .portfolio {
+    background: url('images/portfolio@2x.png') no-repeat 0 50% !important;
+  }
+
+}
