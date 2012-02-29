@@ -293,7 +293,6 @@ a.important:active {
 
 .site {
   position: relative;
-  background: #e3e3e3;
   margin-bottom: 1.5em;
   padding: 0;
 }
@@ -352,3 +351,103 @@ hr {
 .outro {
   text-align: center;
 }
+
+/* Responsive mobile layout */
+
+
+@media only screen and (max-width: 767px) {
+  body {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    width: 272px;
+    padding: 0 auto;
+  }
+
+  h1 {
+    float: none;
+    width: 264px;
+    text-align: center;
+  }
+
+  #menu {
+    float: none;
+  }
+  
+  #menu a {
+    margin: 0 16px 16px 16px;
+  }
+  
+  #uctv {
+    left: -49px;
+  }
+  
+  #portfolio:hover #uctv {
+    top: -20px;
+    left: -49px;
+  }
+  
+  #gslc {
+    top: 0px;
+    left: -71px;
+    transform: rotate(-5deg);
+    -webkit-transform: rotate(-5deg);
+    -moz-transform: rotate(-5deg);
+    -ms-transform: rotate(-5deg);
+    -o-transform: rotate(-5deg);
+  }
+  
+  #portfolio:hover #gslc {
+    top: 0px;
+    left: -71px;
+  }
+  
+  #lza {
+    display: none;
+  }
+  
+  #eslc {
+    top: 0px;
+    left: -33px;
+    transform: rotate(5deg);
+    -webkit-transform: rotate(5deg);
+    -moz-transform: rotate(5deg);
+    -ms-transform: rotate(5deg);
+    -o-transform: rotate(5deg);
+  }
+  
+  #portfolio:hover #eslc {
+    top: 0px;
+    left: -33px;
+  }
+  
+  .site a {
+    display: block;
+    width: 272px;
+    border-bottom: 0;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .site img {
+    float: none;
+    margin: 0 auto;
+    background: none;
+    border-bottom: 0 !important;
+    width: 272px;
+  }
+  
+  .description {
+    float: none;
+    width: 264px;
+  }
+  
+  .description h2 {
+    margin-top: 0;
+  }
+
+
+}
+
