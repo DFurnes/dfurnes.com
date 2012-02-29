@@ -376,50 +376,57 @@ hr {
   }
   
   #menu a {
-    margin: 0 16px 16px 16px;
+    margin: 0 16px 32px 16px;
+  }
+  
+  #portfolio {
+    height: 150px;
   }
   
   #uctv {
-    left: -49px;
+    width: 187.5px;
+    left: 20px;
   }
   
   #portfolio:hover #uctv {
-    top: -20px;
-    left: -49px;
+    left: 20px;
   }
   
   #gslc {
+    width: 187.5px;
     top: 0px;
-    left: -71px;
-    transform: rotate(-5deg);
-    -webkit-transform: rotate(-5deg);
-    -moz-transform: rotate(-5deg);
-    -ms-transform: rotate(-5deg);
-    -o-transform: rotate(-5deg);
+    left: -22px;
   }
   
   #portfolio:hover #gslc {
     top: 0px;
-    left: -71px;
+    left: -22px;
   }
   
   #lza {
-    display: none;
+    width: 187.5px;
+    top: -12px;
+    left: 73px;
+  }
+  
+  #portfolio:hover #lza {
+    top: -12px;
+    left: 73px;
   }
   
   #eslc {
+    width: 187.5px;
     top: 0px;
-    left: -33px;
-    transform: rotate(5deg);
-    -webkit-transform: rotate(5deg);
-    -moz-transform: rotate(5deg);
-    -ms-transform: rotate(5deg);
-    -o-transform: rotate(5deg);
+    left: 110px;
   }
   
   #portfolio:hover #eslc {
     top: 0px;
-    left: -33px;
+    left: 110px;
+  }
+  
+  #zoom {
+    display: none;
   }
   
   .site a {
