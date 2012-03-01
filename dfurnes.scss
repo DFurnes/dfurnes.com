@@ -59,7 +59,7 @@ h1 {
 	margin: 1em 0 0.5em;
 	font-family: 'Novecentowide-Bold', sans-serif;
 	font-weight: normal;
-	font-size: 1.25em;
+	font-size: 2em;
 	color: $lightgray;
 	line-height: 1em;
 }
@@ -169,15 +169,11 @@ a.important:active {
 }
 
 .me {
-	background: url('images/me.png') no-repeat 0 50% !important;
+	background: url('../images/me.png') no-repeat 0 50% !important;
 }
 
 .portfolio {
-	background: url('images/portfolio.png') no-repeat 0 50% !important;
-}
-
-.blog {
-	background: url('images/blog.png') no-repeat 0 50% !important;
+	background: url('../images/portfolio.png') no-repeat 0 50% !important;
 }
 
 #menu a:hover {
@@ -459,12 +455,12 @@ hr {
 	only screen and (min-device-pixel-ratio: 2) {
 
 	.me {
-		background: url('images/me@2x.png') no-repeat 0 50% !important;
+		background: url('../images/me@2x.png') no-repeat 0 50% !important;
 		background-size: 26px 26px;
 	}
 
 	.portfolio {
-		background: url('images/portfolio@2x.png') no-repeat 0 50% !important;
+		background: url('../images/portfolio@2x.png') no-repeat 0 50% !important;
 		background-size: 26px 26px;
 	}
 
