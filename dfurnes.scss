@@ -363,6 +363,10 @@ hr {
 	#menu a {
 		margin: 0 16px 32px 16px;
 	}
+	
+	#menu a span {
+		display: none;
+	}
 
 	#portfolio {
 		height: 150px;
@@ -445,7 +449,6 @@ hr {
 		margin-top: 0;
 	}
 
-
 }
 
 
@@ -469,10 +472,6 @@ hr {
 	.blog {
 		background: url('images/blog@2x.png') no-repeat 0 50% !important;
 		background-size: 26px 26px;
-	}
-	
-	#menu a span {
-		display: none;
 	}
 
 }
