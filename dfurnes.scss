@@ -176,6 +176,10 @@ a.important:active {
 	background: url('images/portfolio.png') no-repeat 0 50% !important;
 }
 
+.blog {
+	background: url('images/blog.png') no-repeat 0 50% !important;
+}
+
 #menu a:hover {
 	opacity: 0.8;
 	color: #333;
@@ -446,8 +450,7 @@ hr {
 }
 
 
-/*	Overrides for iPhone 4 
-	and other high device-pixel-ratio devices
+/*	Retina display (and other high DPI devices)
 	-----------------------------------------	*/
 
 @media 
@@ -461,6 +464,11 @@ hr {
 
 	.portfolio {
 		background: url('images/portfolio@2x.png') no-repeat 0 50% !important;
+		background-size: 26px 26px;
+	}
+	
+	.blog {
+		background: url('images/blog@2x.png') no-repeat 0 50% !important;
 		background-size: 26px 26px;
 	}
 
