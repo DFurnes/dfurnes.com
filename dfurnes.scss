@@ -103,6 +103,14 @@ img {
 	border: 0;
 }
 
+p {
+	margin-top: 0;
+}
+
+sup {
+	line-height: 1;
+}
+
 a {
 	color: #666666;
 	text-decoration: none;
@@ -305,15 +313,84 @@ a.important:active {
 
 /* Blog */
 
+#content.blog {
+	padding-top: 2em;
+}
+
+blockquote { 
+	width: 470px; 
+	margin-top: 0;
+	margin-left: -30px; 
+	padding-left: 30px; 
+	background: url('http://www.dfurnes.com/images/quote.png') no-repeat 0 0; 
+	font-family: Georgia, serif;
+	font-style: italic;
+	color: #222;
+}
+
+blockquote em { font-style: normal; }
+blockquote ul, blockquote ol { padding-left: 2em; }
+
+#content object {
+	margin-top: 0.5em;
+	margin-bottom: 1em;
+	width: 475px !important;
+	height: 352px !important;
+}
+
+#content iframe {
+	margin-top: 0.5em;
+	margin-bottom: 1em;
+	width: 475px !important;
+	height: 352px !important;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+	margin-bottom: 20px;
+	margin-top: 5px;
+}
+
 .post {
-	width: 620px;
-	margin: 0 auto;
+	clear: both;
+	font-size: 0.9em;
+}
+
+span.permalink {
+	float: left;
+	width: 130px;
+	font-size: 12px;
+	font-family: 'Novecentowide-Bold', sans-serif;
+}
+
+span.permalink a {
+	font-weight: bold;
+	text-decoration: none;
+	border-bottom: 0;
+	color: #e3e3e3;
+	text-transform: uppercase;
+}
+
+div.post-content {
+	float: right;
+	width: 450px;
+	padding-right: 25px;
+	margin-bottom: 4em; padding-top: 0; margin-top: 0;
+}
+
+body#permalink-page .post-content {
+	margin-bottom: 2em;
+}
+
+span.label {
+	font-weight: bold;
 }
 
 .post h2 {
-	text-align: left;
-	margin-bottom: 0 !important;
-	padding-top: 1em !important;
+	margin: 0;
+	padding-top: 1em;
+	padding-bottom: 0.5em;
 }
 
 .post h4 {
@@ -324,21 +401,39 @@ a.important:active {
 	margin-bottom: 0.25em;
 }
 
-hr {
-	width: 50%;
-	border: 0;
-	height: 0;
-	border-top: 1px solid #ddd;
-	border-bottom: 0;
-	margin: 15px auto;
+.text h2 a { color: #000; }
+
+.post ol, ul {
+	padding-left: 2em;
 }
 
-.outro {
+#search {
+	clear: both;
+	margin: 0 auto;
+	margin-bottom: 30px;
+}
+
+#search form {
 	text-align: center;
 }
 
-/* Responsive mobile layout */
+#search form input {
+	border: 1px solid #ccc;
+	padding: 5px;
+	font-size: 1em;
+	padding-left: 32px;
+	background: #fff url('http://dfurnes.com/images/search.png') no-repeat 5px 50%;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	-o-border-radius: 2px;
+}
 
+.search_query {
+	font-weight: bold;
+}
+
+/* Responsive mobile layout */
 
 @media only screen and (max-width: 767px) {
 	body {
@@ -447,6 +542,55 @@ hr {
 
 	.description h2 {
 		margin-top: 0;
+	}
+	
+	#content object {
+		width: 264px !important;
+		height: 209px !important;
+	}
+	
+	#content iframe {
+		width: 264px !important;
+		height: 209px !important;
+	}
+	
+	span.permalink {
+		display: block;
+		float: none;
+		width: 264px;
+		text-align: center;
+	}
+	
+	div.post-content {
+		float: none;
+		width: 264px;
+	}
+	
+	div.post-content div {
+		width: 264px;
+	}
+	
+	blockquote {
+		width: 259px;
+	}
+	
+	div.post {
+		width: 264px;
+	}
+	
+	blockquote {
+		background: url('http://www.dfurnes.com/images/quote.png') no-repeat 5px 0;
+		background-size: 30px 30px;
+	}
+	
+	.post h2 {
+		padding-top: 0;
+		margin-top: 0;
+		text-align: center;
+	}
+	
+	#search {
+		width: 264px;
 	}
 
 }
