@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+		<head> 
+		<link rel="shortcut icon" href="{Favicon}" />
+		{block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
+		<title>David Furnes{block:SearchPage}: {lang:Search results for SearchQuery}{/block:SearchPage}{block:PostSummary}: {PostSummary}{/block:PostSummary}</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+		<link rel="stylesheet" media="all" href="http://www.dfurnes.com/dfurnes.css" />
+	</head> 
+
+	<body id="{block:PermalinkPage}permalink-page{/block:PermalinkPage}"> 
+		<h1 id="name"><a href="http://dfurnes.com/">David Furnes</a></h1>
+
+		<ul id="menu">
+			<li><a class="me" href="http://dfurnes.com/"><span>Me</span></a></li>
+			<li><a class="portfolio" href="http://dfurnes.com/portfolio"><span>Portfolio</span></a></li>
+			<li><a class="blog active" href="http://blog.dfurnes.com/"><span>Thoughts</span></a></li>
+		</ul>
+
+		<div id="content" class="blog-content">
+			{block:SearchPage}
+			<div class="post search">
+			<span class="permalink">{lang:Search}</span>
+			<div class="post-content">
+					{block:SearchResults}
+							{lang:SearchResultCount results for SearchQuery 2}.
+					{/block:SearchResults}
+					{block:NoSearchResults}
+							{lang:No search results for SearchQuery 2}.
+					{/block:NoSearchResults}
+			</div></div></div>
+			{/block:SearchPage}
+
+			{block:Posts}
+			{block:Link}
+			<div class="post link"> 
+				{block:Date}
+				<span class="permalink">
+					<a href="{Permalink}">{ShortMonth} {DayOfMonth}, {Year}</a><br />
+				</span>
+				{/block:Date}
+				<div class="post-content">
+					<h2><a href="{URL}">{Name}</a></h2> 
+					{block:Description}{Description}{/block:Description}
+				</div>
+			</div>
+			{/block:Link}
+
+			{block:Answer}
+			<div class="post answer">
+				{block:Date}
+				<span class="permalink">
+					<a href="{Permalink}">{ShortMonth} {DayOfMonth}, {Year}</a><br />
+				</span>
+				{/block:Date}
+				<div class="post-content">
+					<div class="question">
+						{lang:Asker asked}: {Question}
+					</div>
+					{Answer}
+				</div>
+			</div>	
+			{/block:Answer}
+
+			{block:Chat}
+			<div class="post chat">
+				{block:Date}
+				<span class="permalink">
+					<a href="{Permalink}">{ShortMonth} {DayOfMonth}, {Year}</a><br />
+				</span>
+				{/block:Date}
+				<div class="post-content">
+					{block:Title}<h2><a href="{Permalink}">{Title}</a></h2>{/block:Title}
+					<ol>
+						{block:Lines}
+						<li>{block:Label}<span class="label">{Label}</span>{/block:Label}
+						{Line}</li>
+						{/block:Lines}
+					</ol>
+				</div>
+			</div>
+			{/block:Chat}
+
+			{block:Video}
+			<div class="post video">
+				{block:Date}
+				<span class="permalink">
+					<a href="{Permalink}">{ShortMonth} {DayOfMonth}, {Year}</a><br />
+				</span>
+				{/block:Date}
+				<div class="post-content">
+					{Video-500}
+					{block:Caption}{Caption}{/block:Caption}
+				</div>
+			</div>
+			{/block:Video}
+
+			{block:Audio}
+			<div class="post audio">
+				{block:Date}
+				<span class="permalink">
+					<a href="{Permalink}">{ShortMonth} {DayOfMonth}, {Year}</a><br />
+				</span>
+				{/block:Date}
+				<div class="post-content">
+					{block:AlbumArt}
+					<img src="{AlbumArtURL}" alt="{block:Artist}{Artist}{/block:Artist}{block:TrackName} - {TrackName}{/block:TrackName}" class="album-art" />	
+					{/block:AlbumArt}
+					{AudioPlayerBlack}
+					{block:Caption}{Caption}{/block:Caption}
+				</div>
+			</div>
+			{/block:Audio}
+
+			{block:Photo}
+			<div class="post photo">
+				{block:Date}
+				<span class="permalink">
+					<a href="{Permalink}">{ShortMonth} {DayOfMonth}, {Year}</a><br />
+				</span>
+				{/block:Date}
+				<div class="post-content">
+					{LinkOpenTag}
+					<img src="{PhotoUrl-500}" alt="{PhotoAlt}"/>
+					{LinkCloseTag}
+					{block:Caption}{Caption}{/block:Caption}
+				</div>
+			</div>
+			{/block:Photo}
+
+			{block:Quote}
+			<div class="post quote">
+				{block:Date}
+				<span class="permalink">
+					<a href="{Permalink}">{ShortMonth} {DayOfMonth}, {Year}</a><br />
+				</span>
+				{/block:Date}
+				<div class="post-content">
+					<blockquote class="thequote">{Quote}</blockquote>
+					{block:Source}{Source}{/block:Source}
+				</div>
+			</div>
+			{/block:Quote}
+
+			{block:Text}
+			<div class="post text">
+				<span class="permalink">
+				{block:Date}
+					<a href="{Permalink}">{ShortMonth} {DayOfMonth}, {Year}</a><br />
+				{/block:Date}
+				</span>
+				<div class="post-content">
+					{block:Title}<h2><a href="{Permalink}">{Title}</a></h2>{/block:Title}
+					{Body}
+				</div>
+			</div>
+			{/block:Text}
+			
+			{/block:Posts}
+
+			{PostNotes}
+
+			{block:IndexPage}
+			{block:Pagination}
+			<div class="post">
+			<span class="permalink"><strong>{lang:Navigate}</strong></span>
+				<div class="post-content">
+					{block:NextPage}<a href="{NextPage}" id="past">&laquo; {lang:To the past}</a>{/block:NextPage}
+					<span id="page">{lang:Page CurrentPage of TotalPages}</span>
+					{block:PreviousPage}<a href="{PreviousPage}" id="future">{lang:To the future} &raquo;</a>{/block:PreviousPage}
+				</div>
+			</div>
+			{/block:Pagination}
+			{/block:IndexPage}
+	
+	<div id="search">
+		<form action="/search" method="get"> 
+			<input type="text" name="q" placeholder="Search posts..."/> 
+		</form> 
+	</div>
+	
+	</div>
+</body>
+</html>
