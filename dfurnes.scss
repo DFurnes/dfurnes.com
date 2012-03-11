@@ -313,13 +313,14 @@ a.important:active {
 
 /* Blog */
 
-#content.blog {
+#content.blog-content {
+	width: 670px;
 	padding-top: 2em;
 }
 
 blockquote { 
 	width: 470px; 
-	margin-top: 0;
+	margin-top: 0.5em;
 	margin-left: -30px; 
 	padding-left: 30px; 
 	background: url('http://www.dfurnes.com/images/quote.png') no-repeat 0 0; 
