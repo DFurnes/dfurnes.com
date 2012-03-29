@@ -370,7 +370,7 @@ span.permalink a {
 	font-weight: bold;
 	text-decoration: none;
 	border-bottom: 0;
-	color: #e3e3e3;
+	color: $lightgray;
 	text-transform: uppercase;
 }
 
@@ -387,6 +387,10 @@ body#permalink-page .post-content {
 
 span.label {
 	font-weight: bold;
+}
+
+.link h2 {
+	text-align: left;
 }
 
 .post h2 {
