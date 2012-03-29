@@ -1,10 +1,12 @@
 <!doctype html>
 <html lang="en">
-	<head> 
+		<head> 
 		{block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
 		<title>David Furnes{block:SearchPage}: {lang:Search results for SearchQuery}{/block:SearchPage}{block:PostSummary}: {PostSummary}{/block:PostSummary}</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 		<link rel="stylesheet" media="all" href="http://www.dfurnes.com/dfurnes.css" />
+				<link rel="apple-touch-icon-precomposed" href="http://dfurnes.com/apple-touch-icon.png" />
+				<link rel="shortcut icon" href="http://dfurnes.com/favicon.ico" />
 	</head> 
 
 	<body id="{block:PermalinkPage}permalink-page{/block:PermalinkPage}"> 
@@ -39,7 +41,7 @@
 				</span>
 				{/block:Date}
 				<div class="post-content">
-					<h2><a href="{URL}">{Name}</a></h2> 
+					<h2><a href="{URL}">{Name}</a> &rarr;</h2> 
 					{block:Description}{Description}{/block:Description}
 				</div>
 			</div>
@@ -154,7 +156,7 @@
 				</div>
 			</div>
 			{/block:Text}
-			
+
 			{/block:Posts}
 
 			{PostNotes}
@@ -171,13 +173,25 @@
 			</div>
 			{/block:Pagination}
 			{/block:IndexPage}
-	
+
 	<div id="search">
 		<form action="/search" method="get"> 
 			<input type="text" name="q" placeholder="Search posts..."/> 
 		</form> 
 	</div>
-	
 	</div>
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-28519021-1']);
+		_gaq.push(['_setDomainName', 'dfurnes.com']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
 </body>
 </html>
