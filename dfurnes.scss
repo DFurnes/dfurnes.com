@@ -440,7 +440,6 @@ span.label {
 }
 
 /* Responsive mobile layout */
-
 @media only screen and (max-width: 767px) {
 	body {
 		-webkit-text-size-adjust: 100%;
@@ -601,10 +600,7 @@ span.label {
 
 }
 
-
-/*	Retina display (and other high DPI devices)
-	-----------------------------------------	*/
-
+/*	Retina display (and other high DPI devices)	*/
 @media 
 	only screen and (-webkit-min-device-pixel-ratio: 2),
 	only screen and (min-device-pixel-ratio: 2) {
