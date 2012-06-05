@@ -108,7 +108,7 @@ blockquote ul, blockquote ol { padding-left: 2em; }
 
 #content object { margin-top: 0.5em; margin-bottom: 1em; width: 475px !important; height: 352px !important; }
 
-#content iframe { margin-top: 0.5em; margin-bottom: 1em; width: 475px !important; height: 352px !important; }
+#content iframe { margin-top: 0.5em; margin-bottom: 1em; width: 475px !important; }
 
 img { display: block; max-width: 100%; margin-bottom: 20px; margin-top: 5px; }
 
