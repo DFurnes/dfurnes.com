@@ -100,7 +100,7 @@ a.important:active { background: #fffbd0; }
 /* Blog */
 #content.blog-content { width: 670px; margin: 0 auto; padding-top: 2em; }
 
-blockquote { width: 470px; margin-top: 0.5em; margin-left: -30px; padding-left: 30px; background: url("http://www.dfurnes.com/images/quote.png") no-repeat 0 0; font-family: Georgia, serif; font-style: italic; color: #222; }
+blockquote { width: 440px; margin-top: 0.5em; margin-left: 5px; padding-left: 30px; background: url("http://www.dfurnes.com/images/quote.png") no-repeat 0 0; font-family: Georgia, serif; font-style: italic; color: #222; }
 
 blockquote em { font-style: normal; }
 
