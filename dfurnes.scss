@@ -109,6 +109,11 @@ h1 {
 	color: #000;
 	line-height: 1em;
 	
+	a {
+		color: #000;
+		border-bottom: 0;
+	}
+	
 	@media only screen and (max-width: 350px) {
 		font-size: 1.8em;
 	}
@@ -116,7 +121,8 @@ h1 {
 
 h2 {
 	clear: both;
-	margin: 2em 0 1em;
+	margin: 0 0 1em;
+	padding-top: 2em;
 	font-family: Georgia, "Times New Roman", Times, serif;
 	font-weight: normal;
 	font-size: 1.25em;
@@ -201,9 +207,7 @@ strong {
 }
 
 .outro {
-	h2 {
-		padding-top: 2em;
-	}
+	clear: both;
 }
 
 footer {
@@ -252,7 +256,8 @@ blockquote {
 	background: url('http://www.dfurnes.com/images/quote.png') no-repeat 0 0; 
 	font-family: Georgia, "Times New Roman", Times, serif;
 	margin-top: 0.5em;
-	margin-left: 5px; 
+	margin-left: 5px;
+	margin-right: 1em;
 	padding-left: 30px; 
 	font-style: italic;
 	color: #222;
@@ -412,6 +417,13 @@ a.important:active {
 .post ol, ul {
 	padding-left: 2em;
 }
+
+.blogvertisement {
+	h2 {
+		padding-top: 0;
+	}
+}
+
 
 .pagination {
 	clear: both;

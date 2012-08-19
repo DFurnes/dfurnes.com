@@ -17,9 +17,10 @@ br.linebreakmid { display: inline; }
 @media only screen and (min-width: 1025px) { br.linebreakmid { display: none; } }
 
 h1 { margin: 1em 0 0.75em; font-family: 'Patua One', Georgia, "Times New Roman", Times, serif; font-weight: normal; font-size: 2em; color: #000; line-height: 1em; }
+h1 a { color: #000; border-bottom: 0; }
 @media only screen and (max-width: 350px) { h1 { font-size: 1.8em; } }
 
-h2 { clear: both; margin: 2em 0 1em; font-family: Georgia, "Times New Roman", Times, serif; font-weight: normal; font-size: 1.25em; color: #000; }
+h2 { clear: both; margin: 0 0 1em; padding-top: 2em; font-family: Georgia, "Times New Roman", Times, serif; font-weight: normal; font-size: 1.25em; color: #000; }
 @media only screen and (max-width: 700px) { h2 { margin: 0 0 1em; } }
 
 strong { color: #000; }
@@ -41,7 +42,7 @@ strong { color: #000; }
 .site .description h2 a:hover { color: #666; }
 .site .description .date { font-size: 0.8em; color: #666; }
 
-.outro h2 { padding-top: 2em; }
+.outro { clear: both; }
 
 footer { clear: both; font-weight: bold; margin: 2em auto 2em; text-align: center; }
 footer a { color: #bbb; margin: 0 0.25em; border-bottom: 0; }
@@ -56,7 +57,7 @@ sup { line-height: 1; }
 
 small { display: block; line-height: 1.4em; font-size: 0.6em; color: #ccc; }
 
-blockquote { background: url("http://www.dfurnes.com/images/quote.png") no-repeat 0 0; font-family: Georgia, "Times New Roman", Times, serif; margin-top: 0.5em; margin-left: 5px; padding-left: 30px; font-style: italic; color: #222; }
+blockquote { background: url("http://www.dfurnes.com/images/quote.png") no-repeat 0 0; font-family: Georgia, "Times New Roman", Times, serif; margin-top: 0.5em; margin-left: 5px; margin-right: 1em; padding-left: 30px; font-style: italic; color: #222; }
 
 blockquote em { font-style: normal; }
 
@@ -104,6 +105,8 @@ a.important:active { background: #fffbd0; }
 .text h2 a { color: #000; }
 
 .post ol, ul { padding-left: 2em; }
+
+.blogvertisement h2 { padding-top: 0; }
 
 .pagination { clear: both; padding-bottom: 1em; text-align: center; }
 .pagination a { margin: 0 1em; }
