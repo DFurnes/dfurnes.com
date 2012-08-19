@@ -3,41 +3,135 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>David Furnes - Web Design &amp; Coding</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta name="description" content="The online portfolio of David Furnes. I am passionate about design, coding, and crafting a clean user experience." />
+  
+  <title>David Furnes &mdash; Design &amp; Development</title>
+
+  <meta name="description" content="The online portfolio of designer/developer David Furnes. I like making things that make life better." />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+  
+  <link rel="apple-touch-icon-precomposed" href="apple-touch-icon.png" />
+  <link rel="shortcut icon" href="favicon.ico" />
+  
   <link rel="stylesheet" media="all" href="dfurnes.css" />
-  <link rel="apple-touch-icon-precomposed" href="http://dfurnes.com/apple-touch-icon.png" />
-  <link rel="shortcut icon" href="http://dfurnes.com/favicon.ico" />
+  <link rel="stylesheet" media="all" href="webfonts/ss-social.css" />
+  <link href='http://fonts.googleapis.com/css?family=Patua+One' rel='stylesheet' type='text/css'>
+  
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+  <script src="js/jquery.smooth-scroll.min.js"></script>
 </head>
 
 <body>
-  <h1 id="name"><a href="http://dfurnes.com/">David Furnes</a></h1>
+  <div class="section intro">
+    <div class="content">
+      <h1 id="name">David Furnes, <br class="linebreak700" />designer/developer.</h1>
   
-  <ul id="menu">
-    <li><a class="me active" href="http://dfurnes.com/"><span>Me</span></a></li>
-    <li><a class="portfolio" href="/portfolio"><span>Portfolio</span></a></li>
-    <li><a class="blog" href="http://blog.dfurnes.com/"><span>Thoughts</span></a></li>
-  </ul>
-  
-  <div id="content">
-    <div id="portfolio">
-      <img id="zoom" src="images/zoom.png" alt="zoom" />
-      <img id= "gslc" src="portfolio/images/gslc.png" alt="gslc-ct.org" />
-      <img id= "eslc" src="portfolio/images/eslc.png" alt="eslc.engr.uconn.edu" />
-      <img id= "lza" src="portfolio/images/lza.png" alt="lakezoarauthority.org" />
-      <img id="uctv" src="portfolio/images/uctv.png" alt="uctv.uconn.edu" />
-      <a class="portfolio-link" href="/portfolio"><span>View portfolio</span></a>
+      <p><strong>I like making things that make life better.</strong> I believe that thoughtful design can lead to products that are not just intuitive but delightful to use. I'm currently studying Computer Science &amp; Psychology at the <a href="http://www.uconn.edu/">University of Connecticut</a>.</p>
+      
+      <p>Here are some things I've made in the past. If you like what you see, <a href="#contact"  class="important">get in touch</a>.</p>
     </div>
+  </div>
   
-    <p class="intro"><strong>I like making things that make life better.</strong> I believe in writing clean and efficient code, and designing interfaces that are both intuitive and delightful to use. I'm currently working as a Web Developer Intern at <a href="http://www.dosomething.org">DoSomething.org</a> and studying Computer Science &amp; Psychology at the <a href="http://www.uconn.edu/">University of Connecticut</a>.</p>
-    <h2>Like what you see?</h2>
-    <p>My <a href="resume.pdf" class="important">r&eacute;sum&eacute;</a> is available for download as a PDF. I'm currently available for freelance work. If you want to contact me for work or just to chat, send me a note at <a href="mailto:david@dfurnes.com" class="important">david@dfurnes.com</a>.</p>
-  </div>  
+  <div class="site">
+    <div class="content">
+      <div class="graphic">
+        <img src="images/portfolio/dash.png" alt="DoSomething.org Dashboard" />
+      </div>
+      <div class="description">
+        <h2>DoSomething.org Dashboard</h2>
+        <p>While interning at DoSomething.org, I found that similar questions popped up all the time: What meeting rooms are free? When was code last deployed? Will I need an umbrella to pick up lunch? What is that song playing on the other side of the office?</p> 
+        <p>With some <a href="http://www.panic.com/blog/2010/03/the-panic-status-board/">inspiration</a>, I set out to fix this. After proposing the project to my supervisor, I was given time to bring my vision to reality over the following weeks.</p>
+        <p>Dashboard provides an at-a-glance view of total members, live Twitter mentions, the weather outside, conference room availability (through Google Calendar), tech status (through Github and Redmine), and &mdash; this is pretty awesome &mdash; an office jukebox powered by Rdio.</p>
+        <p>Dashboard was built in <a href="#">Node.js</a>, and uses <a href="#">Socket.io</a> to push instant updates to connected clients without requiring a browser refresh.</p>
+        <p class="date">June &mdash; August 2012</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="site">
+    <div class="content">
+      <div class="graphic">
+        <img src="images/portfolio/eslc.png" alt="eslc.engr.uconn.edu" />
+      </div>
+      <div class="description">
+        <h2>Engineering Student <br class="linebreakmid" />Leadership Council <a href="http://eslc.engr.uconn.edu/">&rarr;</a></h2>
+        
+        <p>As designer for the Engineering Student Leadership Council at UConn, I created a new logo &amp; brand for the club and designed a matching responsive website.</p>
+        <p>While the club ran many popular events, few students knew what ESLC was. I worked to change this by tying the groups many events together with a common brand identity (used on posters, tickets, email, and the web).
+        <p>I also made a MailChimp newsletter with a matching custom-designed theme to inform students of upcoming events and meetings.</p>
+        <p class="date">December 2011</a></p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="site">
+    <div class="content">
+      <div class="graphic">
+        <img src="images/portfolio/open.png" alt="OPEN (beta)" />
+      </div>
+      <div class="description">
+        <h2>One Planet Education <a href="http://beta.dfurnes.com/open/landing/">&rarr;</a></h2>
+        <p>As design intern for the One Planet Education Network, <br class="linebreakfull" />I wrote, designed, and coded a landing page for customers interested in purchasing their first educational game.</p>
+        <p>The signup form includes client-side verification of input, and automatically selects the customer's credit card type based on the typed number. It uses the <a href="http://en.wikipedia.org/wiki/Luhn_algorithm">Luhn Algorithm</a> to quickly check the user's credit card number for typos.</p>
+        <p class="date">June &mdash; August 2011</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="site">
+    <div class="content">
+      <div class="graphic">
+        <img src="images/portfolio/uctv.png" alt="uctv.uconn.edu" />
+      </div>    
+      <div class="description">
+        <h2>UCTV <a href="http://uctv.uconn.edu/">&rarr;</a></h2>
+        <p>I designed and coded a brand new website for UCTV, the student television station at UConn, allowing the group to make all of their videos easily available online.</p>
+        <p class="date">April 2011 &mdash; Present</p>
+      </div>
+    </div>
+  </div>
+  
+  
+  <div class="site">
+    <div class="content">
+      <div class="graphic">
+        <img src="images/portfolio/gslc.png" alt="gslc-ct.org" />
+      </div>
+      <div class="description">
+        <h2>Good Shepherd <a href="http://www.gslc-ct.org/">&rarr;</a></h2>
+        <p>I worked with the pastor and staff at Good Shepherd to create a website that was friendly and welcoming to new members, with an adaptive design that scales across computer, tablet, and phone displays (including Retina graphics for iPhone, iPad, &amp; other high-PPI displays).</p>
+        <p class="date">August 2010</p>
+      </div>
+    </div>
+  </div>
+  <div class="content"> 
+    <h2 id="contact">Like what you see?</h2>
+    <p>My <a href="resume.pdf" class="important">r&eacute;sum&eacute;</a> is available for download as a PDF. I'm currently available for freelance work, and seeking a product design/development job after I graduate in the spring. If you want to contact me for work or just to chat, send me a note at <a href="mailto:david@dfurnes.com" class="important">david@dfurnes.com</a>.</p>
+  </div>
+  
+  <footer class="ss-icon" style="font-weight: bold;">
+    <a href="https://www.twitter.com/dfurnes" title="@dfurnes on Twitter">Twitter</a> <a href="http://blog.dfurnes.com" title="my blog">Tumblr</a> <a href="http://www.github.com/dfurnes" title="DFurnes on Github">Octocat</a>
+  </footer>
 </body>
 
-<script type="text/javascript">
+<script type="text/javascript" src="js/retina.js"></script>
+
+<script type="text/javascript" charset="utf-8">
+  var jump = function(e) {
+         e.preventDefault();
+         var target = $(this).attr("href");
+
+         $('html,body').animate({ scrollTop: $(target).offset().top }, 500, function() {
+            location.hash = target;
+         });
+  }
+
+  $(document).ready(function() {
+     $('a[href*=#]').bind("click", jump);
+  });
+
+</script>
+
+<!-- <script type="text/javascript">
 
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-28519021-1']);
@@ -49,5 +143,5 @@
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 
-</script>
+</script> -->
 </html>

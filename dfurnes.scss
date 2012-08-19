@@ -1,23 +1,38 @@
-/* @license
- * MyFonts Webfont Build ID 1903141, 2012-01-11T23:36:29-0500
- * 
- * The fonts listed in this notice are subject to the End User License
- * Agreement(s) entered into by the website owner. All other parties are 
- * explicitly restricted from using the Licensed Webfonts(s).
- * 
- * You may obtain a valid license at the URLs below.
- * 
- * Webfont: Novecento Wide Bold by Synthview
- * URL: http://www.myfonts.com/fonts/synthview/novecento/wide-bold/
- * Licensed pageviews: unlimited
- * 
- * License: http://www.myfonts.com/viewlicense?type=web&buildid=1903141
- * Webfonts copyright: Copyright &#x00A9; 2011 by Jan Tonellato. All rights reserved.
- * 
- * © 2012 Bitstream Inc
+/*
+ * Web Fonts from fontspring.com
+ *
+ * All OpenType features and all extended glyphs have been removed.
+ * Fully installable fonts can be purchased at http://www.fontspring.com
+ *
+ * The fonts included in this stylesheet are subject to the End User License you purchased
+ * from Fontspring. The fonts are protected under domestic and international trademark and 
+ * copyright law. You are prohibited from modifying, reverse engineering, duplicating, or
+ * distributing this font software.
+ *
+ * (c) 2010-2011 Fontspring
+ *
+ *
+ *
+ *
+ * The fonts included are copyrighted by the vendor listed below.
+ *
+ * Vendor:      exljbris
+ * License URL: http://www.fontspring.com/fflicense/exljbris
+ *
+ *
  */
 
- @font-face {font-family: 'Novecentowide-Bold';src: url('webfonts/1D0A25_0_0.eot');src: url('webfonts/1D0A25_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/1D0A25_0_0.woff') format('woff'),url('webfonts/1D0A25_0_0.ttf') format('truetype');}
+@font-face {
+		font-family: 'CallunaRegular';
+		src: url('webfonts/Calluna-Regular-webfont.eot');
+		src: url('webfonts/Calluna-Regular-webfont.eot?iefix') format('eot'),
+				 url('webfonts/Calluna-Regular-webfont.woff') format('woff'),
+				 url('webfonts/Calluna-Regular-webfont.ttf') format('truetype'),
+				 url('webfonts/Calluna-Regular-webfont.svg#webfontJYolXlF6') format('svg');
+		font-weight: normal;
+		font-style: normal;
+
+}
 
 /* Variables */
 
@@ -41,63 +56,172 @@ $lightgray: #e3e3e3;
 	-o-transition: left 0.5s;
 }
 
+
 /* General */
 
 body {
-	width: 748px;
-	margin: 0 auto;
+	margin: 0;
 	background: #fff;
-	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-	font-size: 16px;
-	line-height: 1.4em;
-	margin-bottom: 3em;
+	color: #111;
+	font-family: 'CallunaRegular', Georgia, "Times New Roman", Times, serif;
+	font-size: 24px;
+	line-height: 1.3em;
+	
+	@media only screen and (max-width: 700px) {
+		font-size: 18px;
+		line-height: 1.4em;
+	} 
+}
+
+br.linebreak700 {
+	display: none;
+
+	@media only screen and (max-width: 700px) {
+		display: inline;
+	} 
+}
+
+br.linebreakfull {
+	display: none;
+
+	@media only screen and (min-width: 1000px) {
+		display: inline;
+	} 
+}
+
+br.linebreakmid {
+	display: inline;
+
+	@media only screen and (max-width: 700px) and (min-width: 450px) {
+		display: none;
+	}
+	
+	@media only screen and (min-width: 1025px) {
+		display: none;
+	} 
 }
 
 h1 {
-	float: left;
-	margin: 1em 0 0.5em;
-	font-family: 'Novecentowide-Bold', sans-serif;
+	margin: 1em 0 0.75em;
+	font-family: 'Patua One', Georgia, "Times New Roman", Times, serif;
 	font-weight: normal;
 	font-size: 2em;
-	color: $lightgray;
+	color: #000;
 	line-height: 1em;
-}
-
-h1 a {
-	color: $lightgray;
-	border-bottom: 0;
-}
-
-h1 a:hover {
-	color: $lightgray;
-	border-bottom: 0;
-}
-
-h1 a:active {
-	background: none;
+	
+	@media only screen and (max-width: 350px) {
+		font-size: 1.8em;
+	}
 }
 
 h2 {
 	clear: both;
 	margin: 2em 0 1em;
-	text-align: center;
-	text-transform: uppercase;
-	font-family: 'Novecentowide-Bold', sans-serif;
+	font-family: Georgia, "Times New Roman", Times, serif;
 	font-weight: normal;
 	font-size: 1.25em;
-	color: $lightgray;
+	color: #000;
+	
+	@media only screen and (max-width: 700px) {
+		margin: 0 0 1em;
+	} 
 }
 
-h3 {
-	clear: both;
-	margin: 2em 0 1em;
-	text-align: center;
-	text-transform: uppercase;
-	font-family: 'Novecentowide-Bold', Helvetica Neue, sans-serif;
-	font-weight: 700;
-	font-size: 1em;
-	color: $lightgray;
+strong {
+	color: #000;
 }
+
+.intro {
+	margin-top: 4em;
+	margin-bottom: 2em;
+	
+	@media only screen and (max-width: 350px) {
+		margin-top: 1em;
+	}
+}
+
+.section {
+	width: 100%;
+
+}
+
+.content {
+	width: 90%;
+	max-width: 940px;
+	margin: 0 auto;
+}
+
+.site {
+	position: relative;
+	font-size: 0.8em;
+	overflow: scroll;
+	padding-bottom: 1em;
+	
+	.graphic {
+		float: left;
+		width: 45% !important;
+		text-align: center;
+		margin-top: 1.5em;
+		
+		img {
+			max-width: 100%;
+		}
+		
+		@media only screen and (max-width: 700px) {
+			float: none;
+			width: 90% !important;
+			margin: 0 auto;
+		} 
+	}
+	
+	.description {
+		float: right;
+		width: 50%;
+		margin: 0 2.5%;
+		
+		@media only screen and (max-width: 700px) {
+			float: none;
+			width: 90%;
+			margin-bottom: 3em;
+		} 
+		
+		h2 a {
+			color: #ccc;
+			border-bottom: 0;
+		}
+		
+		h2 a:hover {
+			color: #666;
+		}
+		
+		.date {
+			font-size: 0.8em;
+			color: #666;
+		}
+	}
+}
+
+footer {
+	font-weight: bold;
+	margin: 2em auto 2em;
+	text-align: center;
+	
+	a {
+		color: #bbb;
+		margin: 0 0.25em;
+		border-bottom: 0;
+	}
+	
+	a:hover{
+		border-bottom: 0;
+	}
+	
+	a:active {
+		background: #fff;
+	}
+}
+
+
 
 img {
 	border: 0;
@@ -110,6 +234,27 @@ p {
 sup {
 	line-height: 1;
 }
+
+small {
+	display: block;
+	line-height: 1.4em;
+	font-size: 0.6em;
+	color: #ccc;
+}
+
+blockquote { 
+	background: url('http://www.dfurnes.com/images/quote.png') no-repeat 0 0; 
+	font-family: Georgia, "Times New Roman", Times, serif;
+	margin-top: 0.5em;
+	margin-left: 5px; 
+	padding-left: 30px; 
+	font-style: italic;
+	color: #222;
+}
+
+blockquote em { font-style: normal; }
+blockquote ul, blockquote ol { padding-left: 2em; }
+
 
 a {
 	color: #666666;
@@ -146,260 +291,111 @@ a.important:active {
 	background: #fffbd0;
 }
 
-#content {
-	clear: both;
-}
-
-#menu {
-	float: right;
-	list-style-type: none;
-}
-
-#menu li {
-	float: left;
-}
-
-#menu a {
-	display: block;
-	height: 26px;
-	font-size: 0.9em;
-	margin: 20px 16px 6px 16px;
-	padding: 2px 0 0 34px;
-	text-transform: lowercase;
-	border-bottom: 0;
-	opacity: 0.5;
-	@include opacity-transition;
-}
-
-#menu a:active {
-	opacity: 0.9;
-}
-
-.me {
-	background: url('images/me.png') no-repeat 0 50% !important;
-}
-
-.portfolio {
-	background: url('images/portfolio.png') no-repeat 0 50% !important;
-}
-
-.blog {
-	background: url('images/blog.png') no-repeat 0 50% !important;
-}
-
-#menu a:hover {
-	opacity: 0.8;
-	color: #333;
-}
-
-#menu a.active {
-	opacity: 1;
-}
-
-/* Homepage */
-
-#portfolio {
-	position: relative;
-	height: 310px;
-	background: $lightgray;
-	margin-bottom: 1.5em;
-	padding: 0;
-}
-
-#zoom {
-	position: absolute;
-	bottom: 10px;
-	right: 10px;
-	opacity: 0.2;
-	@include opacity-transition;
-}
-
-#gslc {
-	position: absolute;
-	top: 10px;
-	left: 65px;
-	@include position-transition;
-}
-
-#uctv {
-	position: absolute;
-	top: -20px;
-	left: 115px;
-	@include position-transition;
-}
-
-#lza {
-	position: absolute;
-	top: -5px;
-	left: 215px;
-	@include position-transition;
-}
-
-#eslc {
-	position: absolute;
-	top: 10px;
-	left: 305px;
-	@include position-transition;
-}
-
-.portfolio-link {
-	display: block;
-	position: relative;
-	width: 748px;
-	height: 310px;
-	border-bottom: 0;
-}
-
-.portfolio-link:hover {
-	border-bottom: 0;
-}
-
-.portfolio-link:active {
-	background: none;
-}
-
-#portfolio:hover #gslc {
-	top: 10px;
-	left: 5px;
-}
-
-#portfolio:hover #uctv {
-	top: -20px;
-	left: 85px;
-}
-
-#portfolio:hover #lza {
-	top: -5px;
-	left: 245px;
-}
-
-#portfolio:hover #eslc {
-	top: 10px;
-	left: 365px;
-}
-
-.portfolio-link span {
-	display: none;
-}
-
-/* Portfolio */
-
-.site {
-	position: relative;
-	margin-bottom: 1.5em;
-	padding: 0;
-}
-
-.site img {
-	float: left;
-}
-
-.description {
-	float: right;
-	width: 350px;
-}
-
-.description h2 {
-	color: #777;
-	margin-bottom: 0;
-}
-
-.date {
-	margin-top: 0;
-	text-align: center;
-	font-size: 0.8em;
-	color: #999;
-}
-
-/* Blog */
-
-#content.blog-content {
-	width: 670px;
-	margin: 0 auto;
-	padding-top: 2em;
-}
-
-blockquote { 
-	width: 440px; 
-	margin-top: 0.5em;
-	margin-left: 5px; 
-	padding-left: 30px; 
-	background: url('http://www.dfurnes.com/images/quote.png') no-repeat 0 0; 
-	font-family: Georgia, serif;
-	font-style: italic;
-	color: #222;
-}
-
-blockquote em { font-style: normal; }
-blockquote ul, blockquote ol { padding-left: 2em; }
+/* Blog things */
 
 #content object {
 	margin-top: 0.5em;
 	margin-bottom: 1em;
-	width: 475px !important;
-	height: 352px !important;
+	width: 100%;
+	
+	@media only screen and (max-width: 700px) {
+		width: 325px !important;
+	} 
 }
 
 #content iframe {
 	margin-top: 0.5em;
 	margin-bottom: 1em;
-	width: 475px !important;
-}
-
-img {
-	display: block;
-	max-width: 100%;
-	margin-bottom: 20px;
-	margin-top: 5px;
+	width: 100%;
+	
+	@media only screen and (max-width: 700px) {
+		width: 325px !important;
+	} 
 }
 
 .post {
 	clear: both;
-	font-size: 0.9em;
+	overflow: scroll;
+	font-size: 0.8em;
+	
+	.permalink {
+		float: left;
+		width: 30%;
+		font-size: 16px;
+		font-family: Georgia, "Times New Roman", Times, serif;
+	
+		a {
+			color: #ccc;
+			text-decoration: none;
+			border-bottom: 0;
+		}
+		
+		@media only screen and (max-width: 700px) {
+			float: none;
+			text-align: center;
+			width: 90% !important;
+			margin: 1em auto 0.75em;
+		} 
+	}
+	
+	.post-content {
+		float: right;
+		width: 65%;
+		padding: 0 2.5%;
+		margin-bottom: 4em;
+		padding-top: 0;
+		margin-top: 0;
+	
+		h2 {
+			padding-top: 0;
+			margin-top: 0.25em;
+		}
+		
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+	
+		.photo {
+			margin-top: 0.5em;
+		
+			a {
+				border-bottom: 0;
+			}
+		}
+		
+		@media only screen and (max-width: 700px) {
+			float: none;
+			width: 90% !important;
+			margin: 0 auto 2em;
+		} 
+	}
 }
 
-span.permalink {
-	float: left;
-	width: 130px;
-	font-size: 12px;
-	font-family: 'Novecentowide-Bold', sans-serif;
-}
-
-span.permalink a {
-	font-weight: bold;
-	text-decoration: none;
-	border-bottom: 0;
-	color: $lightgray;
-	text-transform: uppercase;
-}
-
-div.post-content {
-	float: right;
-	width: 450px;
-	padding-right: 25px;
-	margin-bottom: 4em; padding-top: 0; margin-top: 0;
-}
-
-body#permalink-page .post-content {
-	margin-bottom: 2em;
-}
-
-span.label {
-	font-weight: bold;
-}
-
-.link h2 {
-	text-align: left;
-}
-
-.post h2 {
-	margin: 0;
-	padding-top: 1em;
-	padding-bottom: 0.5em;
+.link .post-content {
+	h2 {
+		a {
+			color: #ccc;
+			border-bottom: 0;
+			
+			span {
+				color: #666;
+				border-bottom: 1px dotted #666;
+			}
+		}
+		
+		a:hover {
+			color: #666;
+		
+			span {
+				color: #000000;
+				border-bottom: 1px dotted #000000;  
+			}
+		}
+	}
 }
 
 .post h4 {
-	text-transform: uppercase;
 	color: #999;
 	font-size: 0.8em;
 	margin-top: 0em;
@@ -412,212 +408,11 @@ span.label {
 	padding-left: 2em;
 }
 
-#search {
-	clear: both;
-	margin: 0 auto;
-	margin-bottom: 30px;
-}
-
-#search form {
+.pagination {
+	margin-bottom: 1em;
 	text-align: center;
-}
-
-#search form input {
-	border: 1px solid #ccc;
-	padding: 5px;
-	font-size: 1em;
-	padding-left: 32px;
-	background: #fff url('http://dfurnes.com/images/search.png') no-repeat 5px 50%;
-	border-radius: 2px;
-	-webkit-border-radius: 2px;
-	-moz-border-radius: 2px;
-	-o-border-radius: 2px;
-}
-
-.search_query {
-	font-weight: bold;
-}
-
-/* Responsive mobile layout */
-@media only screen and (max-width: 767px) {
-	body {
-		-webkit-text-size-adjust: 100%;
-	}
-
-	body {
-		width: 272px;
-		padding: 0 auto;
-	}
-
-	h1 {
-		float: none;
-		width: 264px;
-		text-align: center;
-	}
-
-	#menu {
-		float: none;
-	}
-
-	#menu a {
-		margin: 0 16px 32px 16px;
-	}
 	
-	#menu a span {
-		display: none;
+	a {
+		margin: 0 1em;
 	}
-
-	#portfolio {
-		height: 150px;
-	}
-
-	#uctv {
-		width: 187.5px;
-		left: 20px;
-	}
-
-	#portfolio:hover #uctv {
-		left: 20px;
-	}
-
-	#gslc {
-		width: 187.5px;
-		top: 0px;
-		left: -22px;
-	}
-
-	#portfolio:hover #gslc {
-		top: 0px;
-		left: -22px;
-	}
-
-	#lza {
-		width: 187.5px;
-		top: -12px;
-		left: 73px;
-	}
-
-	#portfolio:hover #lza {
-		top: -12px;
-		left: 73px;
-	}
-
-	#eslc {
-		width: 187.5px;
-		top: 0px;
-		left: 110px;
-	}
-
-	#portfolio:hover #eslc {
-		top: 0px;
-		left: 110px;
-	}
-
-	#zoom {
-		display: none;
-	}
-
-	.portfolio-link {
-		width: 272px;
-		height: 150px;
-	}
-
-	.site a {
-		display: block;
-		width: 272px;
-		border-bottom: 0;
-		overflow: hidden;
-		margin: 0;
-		padding: 0;
-	}
-
-	.site img {
-		float: none;
-		margin: 0 auto;
-		background: none;
-		border-bottom: 0 !important;
-		width: 272px;
-	}
-
-	.description {
-		float: none;
-		width: 264px;
-	}
-
-	.description h2 {
-		margin-top: 0;
-	}
-	
-	#content.blog-content {
-		width: 272px;
-	}
-	
-	#content object {
-		width: 264px !important;
-		height: 209px !important;
-	}
-	
-	#content iframe {
-		width: 264px !important;
-		height: 209px !important;
-	}
-	
-	span.permalink {
-		display: block;
-		float: none;
-		width: 264px;
-		text-align: center;
-	}
-	
-	div.post-content {
-		float: none;
-		width: 264px;
-	}
-	
-	div.post-content div {
-		width: 264px;
-	}
-	
-	div.post {
-		width: 264px;
-	}
-	
-	blockquote {
-		background: url('http://www.dfurnes.com/images/quote.png') no-repeat 5px 0;
-		background-size: 30px 30px;
-		width: 209px;
-	}
-	
-	.post h2 {
-		padding-top: 0;
-		margin-top: 0;
-		text-align: center;
-	}
-	
-	#search {
-		width: 264px;
-	}
-
-}
-
-/*	Retina display (and other high DPI devices)	*/
-@media 
-	only screen and (-webkit-min-device-pixel-ratio: 2),
-	only screen and (min-device-pixel-ratio: 2) {
-
-	.me {
-		background: url('images/me@2x.png') no-repeat 0 50% !important;
-		background-size: 26px 26px;
-	}
-
-	.portfolio {
-		background: url('images/portfolio@2x.png') no-repeat 0 50% !important;
-		background-size: 26px 26px;
-	}
-	
-	.blog {
-		background: url('images/blog@2x.png') no-repeat 0 50% !important;
-		background-size: 26px 26px;
-	}
-
 }
