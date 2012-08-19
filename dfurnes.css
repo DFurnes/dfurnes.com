@@ -31,7 +31,7 @@ strong { color: #000; }
 
 .content { width: 90%; max-width: 940px; margin: 0 auto; }
 
-.site { position: relative; font-size: 0.8em; overflow: scroll; padding-bottom: 1em; }
+.site { clear: both; font-size: 0.8em; padding-bottom: 1em; }
 .site .graphic { float: left; width: 45% !important; text-align: center; margin-top: 1.5em; }
 .site .graphic img { max-width: 100%; }
 @media only screen and (max-width: 700px) { .site .graphic { float: none; width: 90% !important; margin: 0 auto; } }
@@ -41,7 +41,9 @@ strong { color: #000; }
 .site .description h2 a:hover { color: #666; }
 .site .description .date { font-size: 0.8em; color: #666; }
 
-footer { font-weight: bold; margin: 2em auto 2em; text-align: center; }
+.outro h2 { padding-top: 2em; }
+
+footer { clear: both; font-weight: bold; margin: 2em auto 2em; text-align: center; }
 footer a { color: #bbb; margin: 0 0.25em; border-bottom: 0; }
 footer a:hover { border-bottom: 0; }
 footer a:active { background: #fff; }
@@ -81,7 +83,7 @@ a.important:active { background: #fffbd0; }
 #content iframe { margin-top: 0.5em; margin-bottom: 1em; width: 100%; }
 @media only screen and (max-width: 700px) { #content iframe { width: 325px !important; } }
 
-.post { clear: both; overflow: scroll; font-size: 0.8em; }
+.post { clear: both; font-size: 0.8em; }
 .post .permalink { float: left; width: 30%; font-size: 16px; font-family: Georgia, "Times New Roman", Times, serif; }
 .post .permalink a { color: #ccc; text-decoration: none; border-bottom: 0; }
 @media only screen and (max-width: 700px) { .post .permalink { float: none; text-align: center; width: 90% !important; margin: 1em auto 0.75em; } }
@@ -103,5 +105,6 @@ a.important:active { background: #fffbd0; }
 
 .post ol, ul { padding-left: 2em; }
 
-.pagination { margin-bottom: 1em; text-align: center; }
+.pagination { clear: both; padding-bottom: 1em; text-align: center; }
 .pagination a { margin: 0 1em; }
+.pagination .pager { float: left; width: 50%; color: #ddd; }

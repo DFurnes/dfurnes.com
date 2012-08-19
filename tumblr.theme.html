@@ -12,7 +12,7 @@
 	<link rel="apple-touch-icon-precomposed" href="http://www.dfurnes.com/apple-touch-icon.png" />
 	<link rel="shortcut icon" href="http://www.dfurnes.com/favicon.ico" />
 
-	<link rel="stylesheet" media="all" href="http://www.dfurnes.com/dfurnes.css" />
+	<link rel="stylesheet" media="all" href="http://beta.dfurnes.com/dfurnes/dfurnes.css" />
 	<link rel="stylesheet" media="all" href="http://www.dfurnes.com/webfonts/ss-social.css" />
 	<link href='http://fonts.googleapis.com/css?family=Patua+One' rel='stylesheet' type='text/css'>
 </head>
@@ -184,7 +184,6 @@
 		</div>
 	</div>
 	{/block:Text}
-
 	{/block:Posts}
 
 	{PostNotes}
@@ -192,9 +191,8 @@
 	{block:IndexPage}
 	{block:Pagination}
 	<div class="pagination">
-		{block:PreviousPage}<a href="{PreviousPage}" id="future">&larr; {lang:Newer}</a>{/block:PreviousPage}
-		<span id="page">{lang:Page CurrentPage of TotalPages}</span>
-		{block:NextPage}<a href="{NextPage}" id="past">{lang:Older} &rarr;</a>{/block:NextPage}
+		<div class="pager">{block:PreviousPage}<a href="{PreviousPage}" id="future">&larr; {lang:Newer}</a>{/block:PreviousPage}&nbsp;</div>
+		<div class="pager">{block:NextPage}<a href="{NextPage}" id="past">{lang:Older} &rarr;</a>{/block:NextPage}&nbsp;</div>
 	</div>
 	{/block:Pagination}
 	{/block:IndexPage}
