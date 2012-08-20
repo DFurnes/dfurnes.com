@@ -78,11 +78,9 @@ a.important:hover { border-bottom: 1px dotted #000000; }
 a.important:active { background: #fffbd0; }
 
 /* Blog things */
-#content object { margin-top: 0.5em; margin-bottom: 1em; width: 100%; }
-@media only screen and (max-width: 700px) { #content object { width: 325px !important; } }
+object { max-width: 100%; }
 
-#content iframe { margin-top: 0.5em; margin-bottom: 1em; width: 100%; }
-@media only screen and (max-width: 700px) { #content iframe { width: 325px !important; } }
+iframe { max-width: 100%; }
 
 .post { clear: both; font-size: 0.8em; }
 .post .permalink { float: left; width: 30%; font-size: 16px; font-family: Georgia, "Times New Roman", Times, serif; }

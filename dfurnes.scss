@@ -304,24 +304,12 @@ a.important:active {
 
 /* Blog things */
 
-#content object {
-	margin-top: 0.5em;
-	margin-bottom: 1em;
-	width: 100%;
-	
-	@media only screen and (max-width: 700px) {
-		width: 325px !important;
-	} 
+object {
+	max-width: 100%;
 }
 
-#content iframe {
-	margin-top: 0.5em;
-	margin-bottom: 1em;
-	width: 100%;
-	
-	@media only screen and (max-width: 700px) {
-		width: 325px !important;
-	} 
+iframe {
+	max-width: 100%;
 }
 
 .post {
