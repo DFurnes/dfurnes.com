@@ -78,6 +78,8 @@ a.important:hover { border-bottom: 1px dotted #000000; }
 a.important:active { background: #fffbd0; }
 
 /* Blog things */
+.fluid-width-video-wrapper { margin-bottom: 1.5em; }
+
 .post { clear: both; font-size: 0.8em; }
 .post .permalink { float: left; width: 30%; font-size: 16px; font-family: Georgia, "Times New Roman", Times, serif; }
 .post .permalink a { color: #ccc; text-decoration: none; border-bottom: 0; }
