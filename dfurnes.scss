@@ -227,6 +227,8 @@ strong {
 
 .outro {
 	clear: both;
+	padding-top: 48px;
+	text-align: center;
 }
 
 footer {
@@ -367,6 +369,22 @@ a.important:active {
 		img {
 			max-width: 100%;
 			height: auto;
+		}
+
+		aside {
+			float: left;
+			width: 30%;
+			margin-top: 0.3em;
+			margin-left: -35%;
+			color: #999;
+			font-size: 0.8em;
+			line-height: 1.3em;
+
+			@media only screen and (max-width: 700px) {
+				float: none;
+				width: 70%;
+				margin: 0 auto 1em;
+			} 
 		}
 	
 		.photo {
