@@ -1,0 +1,377 @@
+@import 'style/variables';
+
+@import 'style/fonts';
+@import 'style/reset';
+
+// ...
+
+
+
+/* General */
+
+body {
+	margin: 0;
+	background: #fff;
+	color: #111;
+	font-family: 'CallunaRegular', Georgia, "Times New Roman", Times, serif;
+	font-size: 24px;
+	line-height: 1.3em;
+
+	@media only screen and (max-width: 700px) {
+		font-size: 18px;
+		line-height: 1.4em;
+	}
+}
+
+h1 {
+	margin: 1em 0 0.75em;
+	font-family: 'Patua One', Georgia, "Times New Roman", Times, serif;
+	font-weight: normal;
+	font-size: 2em;
+	color: #000;
+	line-height: 1em;
+
+	a {
+		color: #000;
+		border-bottom: 0;
+	}
+
+	@media only screen and (max-width: 350px) {
+		font-size: 1.8em;
+	}
+}
+
+h1.name {
+  font-size: 1.25em;
+}
+
+h2 {
+	clear: both;
+	margin: 0 0 1em;
+	padding-top: 2em;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-weight: normal;
+	font-size: 1.25em;
+	color: #000;
+
+	@media only screen and (max-width: 700px) {
+		margin: 0 0 1em;
+	}
+}
+
+strong {
+	color: #000;
+  font-weight: bold;
+}
+
+.container {
+	width: 90%;
+	max-width: 940px;
+	margin: 0 auto;
+
+  + .container {
+    margin-top: 2em;
+  }
+
+  &.-intro {
+    margin-top: 4em;
+
+    @media only screen and (max-width: 350px) {
+      margin-top: 1em;
+    }
+  }
+}
+
+.site {
+	clear: both;
+	font-size: 0.8em;
+	padding-bottom: 1em;
+
+	.graphic {
+		float: left;
+		width: 45% !important;
+		text-align: center;
+		margin-top: 1.5em;
+
+		a {
+			border-bottom: 0;
+
+			&:active {
+				background: transparent;
+				position: relative;
+				top: 2px;
+			}
+		}
+
+		img {
+			max-width: 100%;
+		}
+
+		@media only screen and (max-width: 700px) {
+			float: none;
+			width: 90% !important;
+			margin: 0 auto;
+		}
+	}
+
+	.description {
+		float: right;
+		width: 50%;
+		margin: 0 2.5%;
+
+		@media only screen and (max-width: 700px) {
+			float: none;
+			width: 90%;
+			margin-bottom: 3em;
+		}
+
+		h2 a {
+			color: #ccc;
+			border-bottom: 0;
+
+			strong {
+				font-weight: normal;
+				color: #000;
+			}
+
+			&:hover strong {
+				text-decoration: underline;
+			}
+		}
+
+		h2 a:hover {
+			color: #666;
+		}
+
+		.date {
+			font-size: 0.8em;
+			color: #666;
+		}
+	}
+}
+
+.social-links {
+	a {
+		color: #bbb;
+		margin: 0 0.25em;
+		border-bottom: 0;
+	}
+
+	a:hover{
+		border-bottom: 0;
+	}
+
+	a:active {
+		background: #fff;
+	}
+}
+
+
+
+img {
+	border: 0;
+}
+
+p {
+	margin-top: 0;
+}
+
+sup {
+	line-height: 1;
+}
+
+small {
+	display: block;
+	line-height: 1.4em;
+	font-size: 0.6em;
+	color: #ccc;
+}
+
+blockquote {
+	background: url('http://www.dfurnes.com/images/quote.png') no-repeat 0 0;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	margin-top: 0.5em;
+	margin-left: 5px;
+	margin-right: 1em;
+	padding-left: 30px;
+	font-style: italic;
+	color: #222;
+}
+
+blockquote em { font-style: normal; }
+blockquote ul, blockquote ol { padding-left: 2em; }
+
+
+a {
+	color: #666666;
+	text-decoration: none;
+	border-bottom: 1px dotted #666666;
+}
+
+a img {
+	outline: 0;
+	border: none;
+}
+
+a.important {
+	color: #333333;
+	border-bottom: 1px dotted #333333;
+	background: #fffde8;
+	padding: 2px;
+}
+
+a:hover {
+	color: #000000;
+	border-bottom: 1px dotted #000000;
+}
+
+a:active {
+	background: #eeeeee;
+}
+
+a.important:hover {
+	border-bottom: 1px dotted #000000;
+}
+
+a.important:active {
+	background: #fffbd0;
+}
+
+/* Blog things */
+
+.fluid-width-video-wrapper {
+	margin-bottom: 1.5em;
+}
+
+.post {
+	clear: both;
+	font-size: 0.8em;
+
+	.permalink {
+		float: left;
+		width: 30%;
+		font-size: 16px;
+		font-family: Georgia, "Times New Roman", Times, serif;
+
+		a {
+			color: #ccc;
+			text-decoration: none;
+			border-bottom: 0;
+		}
+
+		@media only screen and (max-width: 700px) {
+			float: none;
+			text-align: center;
+			width: 90% !important;
+			margin: 1em auto 0.75em;
+		}
+	}
+
+	.post-content {
+		float: right;
+		width: 65%;
+		padding: 0 2.5%;
+		margin-bottom: 4em;
+		padding-top: 0;
+		margin-top: 0;
+
+		h2 {
+			padding-top: 0;
+			margin-top: 0.25em;
+		}
+
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+
+		aside {
+			float: left;
+			width: 30%;
+			margin-top: 0.3em;
+			margin-left: -35%;
+			color: #999;
+			font-size: 0.8em;
+			line-height: 1.3em;
+
+			@media only screen and (max-width: 700px) {
+				float: none;
+				width: 70%;
+				margin: 0 auto 1em;
+			}
+		}
+
+		.photo {
+			margin-top: 0.5em;
+
+			a {
+				border-bottom: 0;
+			}
+		}
+
+		@media only screen and (max-width: 700px) {
+			float: none;
+			width: 90% !important;
+			margin: 0 auto 2em;
+		}
+	}
+}
+
+.link .post-content {
+	h2 {
+		a {
+			color: #ccc;
+			border-bottom: 0;
+
+			span {
+				color: #666;
+				border-bottom: 1px dotted #666;
+			}
+		}
+
+		a:hover {
+			color: #666;
+
+			span {
+				color: #000000;
+				border-bottom: 1px dotted #000000;
+			}
+		}
+	}
+}
+
+.post h4 {
+	color: #999;
+	font-size: 0.8em;
+	margin-top: 0em;
+	margin-bottom: 0.25em;
+}
+
+.text h2 a { color: #000; }
+
+.post ol, ul {
+	padding-left: 2em;
+}
+
+.blogvertisement {
+	h2 {
+		padding-top: 0;
+	}
+}
+
+
+.pagination {
+	clear: both;
+	padding-bottom: 1em;
+	text-align: center;
+
+	a {
+		margin: 0 1em;
+	}
+
+	.pager {
+		float: left;
+		width: 50%;
+		color: #ddd;
+	}
+}
