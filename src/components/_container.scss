@@ -1,0 +1,17 @@
+.container {
+  width: 90%;
+  max-width: 940px;
+  margin: 0 auto;
+
+  + .container {
+    margin-top: 2em;
+  }
+
+  &.-intro {
+    margin-top: 4em;
+
+    @media only screen and (max-width: 350px) {
+      margin-top: 1em;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.pagination {
+  clear: both;
+  padding-bottom: 1em;
+  text-align: center;
+
+  a {
+    margin: 0 1em;
+  }
+
+  .pager {
+    float: left;
+    width: 50%;
+    color: #ddd;
+  }
+}

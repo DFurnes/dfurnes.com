@@ -1,0 +1,42 @@
+.social-links {
+  list-style: none;
+  padding-left: 0;
+
+  li {
+    display: inline-block;
+  }
+}
+
+.social-link {
+  border-bottom: 0;
+  margin: 0 ($base-spacing / 4);
+
+  &:hover{
+    border-bottom: 0;
+  }
+
+  &:active {
+    background: #fff;
+  }
+
+  &:before {
+    @include icomoon;
+    color: #bbb;
+  }
+
+  &.-github:before {
+    content: '\e600';
+  }
+
+  &.-twitter:before {
+    content: '\e602';
+  }
+
+  &.-instagram:before {
+    content: '\e601';
+  }
+
+  span {
+    display: none;
+  }
+}

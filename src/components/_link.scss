@@ -1,0 +1,22 @@
+.link .post-content {
+  h2 {
+    a {
+      color: #ccc;
+      border-bottom: 0;
+
+      span {
+        color: #666;
+        border-bottom: 1px dotted #666;
+      }
+    }
+
+    a:hover {
+      color: #666;
+
+      span {
+        color: #000000;
+        border-bottom: 1px dotted #000000;
+      }
+    }
+  }
+}

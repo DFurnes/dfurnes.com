@@ -1,0 +1,129 @@
+// Border box all the things!
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  background: #fff;
+  color: $dark-gray;
+  font-family: $body-font;
+  font-size: $font-size;
+  line-height: $unitless-line-height;
+}
+
+body {
+  width: 100%;
+
+  @media only screen and (max-width: 700px) {
+    font-size: 20px;
+  }
+}
+
+h1 {
+  color: #000;
+  font-family: $header-font;
+  font-size: $font-size * 2;
+  font-weight: normal;
+  line-height: $header-line-height;
+  margin: 0 0 $base-line-height;
+
+  a {
+    color: #000;
+    border-bottom: 0;
+  }
+}
+
+h2 {
+  padding-top: 2em;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: normal;
+  font-size: $font-size * 1.5;
+  color: #000;
+  margin: 0 0 $base-line-height;
+}
+
+strong {
+  color: #000;
+  font-weight: bold;
+}
+
+img {
+  border: 0;
+}
+
+p {
+  margin-top: 0;
+}
+
+sup {
+  line-height: 1;
+}
+
+small {
+  display: block;
+  line-height: 1.4em;
+  font-size: 0.6em;
+  color: #ccc;
+}
+
+blockquote {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin-top: 0.5em;
+  margin-left: 5px;
+  margin-right: 1em;
+  padding-left: 30px;
+  font-style: italic;
+  color: #222;
+
+  em {
+    font-style: normal;
+  }
+
+  ul, ol {
+    padding-left: 2em;
+  }
+}
+
+a {
+  color: #666666;
+  text-decoration: none;
+  border-bottom: 1px dotted #666666;
+
+  &:hover {
+    color: #000000;
+    border-bottom: 1px dotted #000000;
+  }
+
+  &:active {
+    background: #eeeeee;
+  }
+
+  img {
+    outline: 0;
+    border: none;
+  }
+
+  &.important {
+    color: #333333;
+    border-bottom: 1px dotted #333333;
+    background: #fffde8;
+    padding: 2px;
+
+    &:hover {
+      border-bottom: 1px dotted #000000;
+    }
+
+    &:active {
+      background: #fffbd0;
+    }
+  }
+}
+
+img {
+  border: 0;
+}
+
+p {
+  margin-top: 0;
+}
+

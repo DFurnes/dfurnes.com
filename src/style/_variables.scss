@@ -1,3 +1,14 @@
 /* Variables */
 
-$lightgray: #e3e3e3;
+$light-gray: #e3e3e3;
+$dark-gray: #111;
+
+$body-font: 'CallunaRegular', Georgia, "Times New Roman", Times, serif;
+$header-font: 'Patua One', Georgia, "Times New Roman", Times, serif;
+
+$base-spacing: 24px;
+
+$font-size: 24px;
+$unitless-line-height: 1.5;
+$header-line-height: 1.2;
+$base-line-height: $font-size * $unitless-line-height;
