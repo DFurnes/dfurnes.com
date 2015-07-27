@@ -1,5 +1,14 @@
 /* Variables */
 
+$susy: (
+  container: 960px,
+  columns: 12,
+  gutters: (24/64.5),
+  column-width: 64.5px,
+  gutter-position: inside-static,
+  global-box-sizing: border-box,
+);
+
 $light-gray: #e3e3e3;
 $dark-gray: #111;
 

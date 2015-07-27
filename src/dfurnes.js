@@ -6,4 +6,5 @@
 // "`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'
 //
 
-console.log('you might not need *javascript*!');
+// Load global stylesheet
+import './dfurnes.scss';

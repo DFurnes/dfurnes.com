@@ -10,10 +10,10 @@
     "jquery": "^1.7.0",
     "lodash": "^3.5.0",
     "respond.js": "~1.4.2",
-    "susy": "^2.2.2"
+    "susy": "^2.2.5"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
-    "fender": "~0.0.2"
+    "fender": "~0.0.5"
   }
 }

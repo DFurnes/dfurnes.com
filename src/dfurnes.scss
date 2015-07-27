@@ -6,12 +6,13 @@
 // "`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'
 //
 
+@import '~susy/sass/susy';
+
 @import 'style/variables';
 @import 'style/helpers';
 
 @import 'style/fonts';
 @import 'style/normalize';
-
 @import 'style/base';
 
 @import 'components/container';
