@@ -14,11 +14,17 @@ html, body {
 body {
   @include container();
   width: 100%;
+  margin-bottom: 64px;
 
   @media only screen and (max-width: 700px) {
     font-size: 20px;
   }
 }
+
+p + p {
+  margin-top: 24px;
+}
+
 
 h1 {
   color: #000;
@@ -35,12 +41,20 @@ h1 {
 }
 
 h2 {
-  padding-top: 2em;
   font-family: Georgia, "Times New Roman", Times, serif;
   font-weight: normal;
   font-size: $font-size * 1.5;
   color: #000;
   margin: 0 0 $base-line-height;
+}
+
+h3 {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: $font-small;
+  color: #bbb;
+  margin: 0 0 6px;
 }
 
 strong {
@@ -50,10 +64,6 @@ strong {
 
 img {
   border: 0;
-}
-
-p {
-  margin-top: 0;
 }
 
 sup {
@@ -86,13 +96,13 @@ blockquote {
 }
 
 a {
-  color: #666666;
+  color: #000;
   text-decoration: none;
-  border-bottom: 1px dotted #666666;
+  border-bottom: 2px solid #ddd;
 
   &:hover {
-    color: #000000;
-    border-bottom: 1px dotted #000000;
+    color: $purple;
+    border-bottom: 2px solid $purple;
   }
 
   &:active {
@@ -105,13 +115,12 @@ a {
   }
 
   &.important {
-    color: #333333;
-    border-bottom: 1px dotted #333333;
     background: #fffde8;
     padding: 2px;
 
     &:hover {
-      border-bottom: 1px dotted #000000;
+      color: #000;
+      border-bottom: 2px solid #000;
     }
 
     &:active {
@@ -123,8 +132,3 @@ a {
 img {
   border: 0;
 }
-
-p {
-  margin-top: 0;
-}
-

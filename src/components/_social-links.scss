@@ -24,6 +24,10 @@
     color: #bbb;
   }
 
+  &:hover:before {
+    color: $purple;
+  }
+
   &.-github:before {
     content: '\e600';
   }

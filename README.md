@@ -1,3 +1,3 @@
 # David Furnes
 
-My personal site & blog, published through GitHub pages. :cactus:
+My personal site, published through GitHub pages. :cactus:
