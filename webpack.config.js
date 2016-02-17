@@ -7,4 +7,10 @@ var fender = require('fender');
  * Use Fender for nice and easy builds.
  * @see http://npmjs.com/fender
  */
-module.exports = fender(pkg);
+var config = fender(pkg);
+
+// Some overrides...
+config.output.path = __dirname + '/dist/';
+config.output.publicPath = '/dist/';
+
+module.exports = config;
