@@ -1,0 +1,25 @@
+box: node
+
+build:
+  steps:
+    - npm-install
+    - script:
+        name: echo nodejs information
+        code: |
+          echo "node version $(node -v) running"
+          echo "npm version $(npm -v) running"
+
+deploy:
+  steps:
+    - script:
+        name: start deploy
+        code: |
+          echo "starting"
+    - script:
+        name: take a nap
+        code: sleep 10
+    - script:
+        name: end deploy
+        code: |
+          echo "finishing"
+
