@@ -4,22 +4,24 @@ build:
   steps:
     - npm-install
     - script:
-        name: echo nodejs information
-        code: |
-          echo "node version $(node -v) running"
-          echo "npm version $(npm -v) running"
+      name: echo nodejs information
+      code: |-
+        echo "node version $(node -v) running"
+        echo "npm version $(npm -v) running"
 
-deploy:
-  steps:
-    - script:
-        name: start deploy
-        code: |
-          echo "starting"
-    - script:
-        name: take a nap
-        code: sleep 10
-    - script:
-        name: end deploy
-        code: |
-          echo "finishing"
-
+      deploy:
+        steps:
+          - script:
+            name: start deploy
+            code: |-
+              curl -X "POST" "https://api.github.com/repos/dfurnes/dfurnes.github.com/deployments" \
+              -H "Authorization: token $GIT_TOKEN" \
+              -H "Content-Type: application/json" \
+              -d "{\"ref\":\"$WERCKER_GIT_COMMIT\"}"
+          - script:
+            name: take a nap
+            code: sleep 10
+          - script:
+            name: end deploy
+            code: |-
+              echo "finishing"
