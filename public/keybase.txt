@@ -1,0 +1,73 @@
+==================================================================
+https://keybase.io/dfurnes
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://www.dfurnes.com
+  * I am dfurnes (https://keybase.io/dfurnes) on keybase.
+  * I have a public key with fingerprint E104 B9EC EBE8 5988 1525  25BF 16CE 8D2F D3A9 8543
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01019c14fad4b6d3a8a596fc5bd50e650129287565801f8832b8e17af929ec4796670a",
+      "fingerprint": "e104b9ecebe85988152525bf16ce8d2fd3a98543",
+      "host": "keybase.io",
+      "key_id": "16ce8d2fd3a98543",
+      "kid": "01019c14fad4b6d3a8a596fc5bd50e650129287565801f8832b8e17af929ec4796670a",
+      "uid": "21c76ee956e90ec1fc3f524bc41ea819",
+      "username": "dfurnes"
+    },
+    "service": {
+      "hostname": "www.dfurnes.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1509420216,
+  "expire_in": 157680000,
+  "prev": "84ed0b2b3e4429f1053989281f1d75eb28b87396b7429887b826c40f2578e56f",
+  "seqno": 4,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+
+owGtkntQVFUcxxcW41HIo8FME/QOGDob3HP3Ps5dM0lemUE+y63G5T7OhTvA7rZ3
+AYGoqQSJkRCIKbAGRRlhpHgFhONAyyhaPDQWNBplAKciHs44SjIq2V0G/+vPzvnj
+zPn9Pt/v+Z3f/I75ajVebqsGiyOd9fnRbn1/8Rrj/dmuXIy3iNmYIRdLRUsHShOR
+YjelyiJmwHCAA1YApMSJJE+Leg5yFEtLAsWLFI5oCgcES0CGoimIAwlCPcFDBBhO
+YgkWCSTD0jSDc5gOk2RzMrJZbbLZrtoigJO8CiAeQYqFEFCEunkJ0AKCIiGpD7GQ
+IvWqMMWiuBRqcTynoAjZosbUi2mpvP/g/+e6M5bsCCAwNEIsRSMWRwKQBL1EESQv
+kABxELAuUEE2M5eOVFqUMmxmpGB5OkwNZsoCcvXV9ZFlICsrK2IZihAs6araarPY
+LYIlTU2m2O1WxeAS27OtSzTiTcs+Jl42i2onVUUmsimyxYwZgEoKdtllDCicJQmc
+ALQOQ4essg2ZZBdBMTTE1eV6B2WqlpBEIv4OT/B6RJIEKwGc0rNQ7QiQgMhQiCcg
+Dxk9S/OMmoaQ4SFBCyQuERQDEUVLmOtr75stmIFU6+SSVU9FTjZz9gwbwvJ8PnPX
+e2jcvDTrVm3wmPDonJ2ZMhYGhYV1P5m+Fe6u0dP4ePs/iZzh/TV1usOXbyy23QmJ
+eei1afLFwss9U4PzeM/aSw+Ge2t7wkqCs997LPWZVrZ3eMfOXe31XfRO2mj9zXpm
+ihiIK6iRcx7vajFWv/7Hp0npIA4MHHiGCggdzQ+qevms7UR788+9RcbbDZ0f9Lt9
+WRZ/vmVxo7I59LVR41sxZEP0F283cbtrMzyv//7m+fo+8bSF3jMMp9viD6Ye79o1
+FL7F/wiz9YRzZxR/KsFUlhN+7s9g3+A+bvLvkaKj1bWPni4lMzW7dXPrk4huP8+r
+jo5RLZPbtu6A7BXtcFzx8cKKFxoi740HljcWUHvHFhwN2487eqvTLsV+U9PmG9mc
+cOG+4cO5krnW6aJqTz/nTnDk2hibNrnnwopP1m4OiB+5M0uOxSd0riydHy9n4irI
+u0d3VDbx9TfguS1k/k9K3gvXi8bSqsNjakpqd0SE/PNu+r2RRn2Qc33TK0+VmPzv
+Tq1uv6WctQ5/pFRmTbCONwp/nC9t7qBqWssO170aV9Y486ACJoc2PCf0V16ccZ8p
+MLbMjlfth6vL9iaavw5IrUsMzGo8eTrxpnno4+mcgMoxU8jAlV8MTZi2uMLY7fvQ
+VFpUFbXtpDFyTfiplNaJWxfLO7XB1qjbC83XFpo+3+c8+Ege37e1v+C7cmnDsecD
+Y3V+CT8MHvpq6Oam75/Vdr20pnJoW/avjv11kwbs238B
+=LdW0
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/dfurnes
+
+==================================================================
+
