@@ -40,7 +40,7 @@ export default function Home({ repos, posts, talks }: PropTypes) {
           ))}
         </ul>
       </Section>
-      <Section>
+      <Section tw="pr-6">
         <SectionHeading>Writing:</SectionHeading>
         <ul>
           {posts.map(post => (
@@ -56,7 +56,7 @@ export default function Home({ repos, posts, talks }: PropTypes) {
           ))}
         </ul>
       </Section>
-      <Section>
+      <Section tw="pr-6">
         <SectionHeading>Talks:</SectionHeading>
         <ul>
           {talks.map(talk => (
