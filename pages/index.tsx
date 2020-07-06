@@ -45,7 +45,7 @@ export default function Home({ repos, posts, talks }: PropTypes) {
         <ul>
           {posts.map(post => (
             <li key={post.fields.slug}>
-              <Link href="/posts/[slug]" as={`/posts/${post.fields.slug}`}>
+              <Link href="/posts/[post]" as={`/posts/${post.fields.slug}`}>
                 <a>{post.fields.title}</a>
               </Link>
               <Description>
@@ -61,7 +61,7 @@ export default function Home({ repos, posts, talks }: PropTypes) {
         <ul>
           {talks.map(talk => (
             <li key={talk.fields.slug}>
-              <Link href="/talks/[slug]" as={`/talks/${talk.fields.slug}`}>
+              <Link href="/talks/[talk]" as={`/talks/${talk.fields.slug}`}>
                 <a>{talk.fields.title}</a>
               </Link>
               <Description>
