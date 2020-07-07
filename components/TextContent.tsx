@@ -7,8 +7,7 @@ const styles = css`
 
   /** Center images & round their borders: */
   img {
-    ${tw`rounded`}
-    margin: 0 auto;
+    ${tw`my-4 mx-auto rounded`}
   }
 
   /* Highlight.js: */
