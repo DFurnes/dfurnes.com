@@ -8,10 +8,9 @@ import remark from 'remark';
  *
  * @param source - Markdown source
  */
-export default async function markdown(source: string | null) {
+export default function markdown(source: string | null) {
   const renderer = remark().use(html).use(highlight).use(footnotes);
+  const { contents } = renderer.processSync(source);
 
-  const result = await renderer.process(source);
-
-  return result.contents as string;
+  return contents as string;
 }

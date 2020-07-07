@@ -5,6 +5,7 @@ import { InferGetStaticPropsType, GetStaticPropsContext } from 'next';
 
 import Layout, { Footer } from 'components/Layout';
 import Logo from 'components/Logo';
+import PreviewBanner from 'components/PreviewBanner';
 import Timestamp from 'components/Timestamp';
 import { getRecentPosts, getRecentTalks } from 'app/contentful';
 import { getRepositories } from 'app/github';
@@ -15,12 +16,13 @@ const Description = tw.span`font-sans text-xxs text-gray-400`;
 
 type PropTypes = InferGetStaticPropsType<typeof getStaticProps>;
 
-export default function Home({ repos, posts, talks }: PropTypes) {
+export default function Home({ preview, repos, posts, talks }: PropTypes) {
   return (
     <Layout>
       <Head>
         <title>David Furnes</title>
       </Head>
+      <PreviewBanner preview={preview} />
       <Logo />
       <p tw="text-xl mr-3">
         <b>I like making things that make life better.</b> I'm a software
@@ -88,9 +90,10 @@ export const getStaticProps = async (context: GetStaticPropsContext) => {
 
   return {
     props: {
+      preview: Boolean(context.preview),
       repos: await getRepositories(PINNED_REPOSITORIES),
-      posts: await getRecentPosts(),
-      talks: await getRecentTalks(),
+      posts: await getRecentPosts(context.preview),
+      talks: await getRecentTalks(context.preview),
     },
   };
 };
