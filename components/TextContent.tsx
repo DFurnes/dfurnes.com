@@ -10,9 +10,19 @@ const styles = css`
     ${tw`my-4 mx-auto rounded`}
   }
 
+  code {
+    font-size: 0.9em;
+
+    ${tw`bg-gray-50 dark:bg-gray-900 dark:text-white border-2 border-gray-50 dark:border-gray-900 rounded px-1`}
+  }
+
   /* Highlight.js: */
   .hljs {
     ${tw`block bg-gray-50 dark:bg-gray-900 dark:text-white overflow-auto p-3 rounded`}
+  }
+
+  .hljs-comment {
+    ${tw`text-gray-400`}
   }
 
   .hljs-keyword {
