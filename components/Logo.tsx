@@ -2,6 +2,8 @@ import styled from '@emotion/styled';
 import { confetti } from 'dom-confetti';
 import { useRef } from 'react';
 
+import { event } from 'app/analytics';
+
 import 'twin.macro';
 
 const SURPRISE = {
@@ -23,6 +25,8 @@ export default function Logo() {
 
   const onClick = e => {
     e.preventDefault();
+
+    event('Homepage', 'Clicked Logo', 'Confetti');
     confetti(el.current, SURPRISE);
   };
 
