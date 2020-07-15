@@ -16,8 +16,8 @@ const elements = {
   h4: tw`text-gray-500 italic`,
   blockquote: tw`italic p-8`,
   strong: tw`dark:text-white`,
-  a: tw`no-underline text-black dark:text-white hover:text-purple-500 
-        border-b-2 border-gray-100 dark:border-gray-700 hover:border-purple-500`,
+  a: tw`no-underline text-black dark:text-white hover:text-pink-500 
+        border-b-2 border-gray-100 dark:border-gray-700 hover:border-pink-500`,
 };
 
 const combinations = css`

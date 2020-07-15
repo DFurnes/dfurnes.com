@@ -10,20 +10,38 @@ export interface IPostFields {
   /** Slug */
   slug: string;
 
+  /** Description */
+  description?: string | undefined;
+
   /** Emoji */
   emoji?: string | undefined;
-
-  /** Publication Date */
-  date: string;
 
   /** Content */
   content?: string | undefined;
 
+  /** Embed URL */
+  embedUrl?: string | undefined;
+
   /** Footnote */
   footnote?: string | undefined;
+
+  /** Publication Date */
+  date: string;
+
+  /** Featured */
+  featured?: boolean | undefined;
+
+  /** Archived */
+  archived?: boolean | undefined;
+
+  /** Hidden */
+  hidden?: boolean | undefined;
+
+  /** Display Date? */
+  displayDate?: boolean | undefined;
 }
 
-/** A blog post. */
+/** A note or blog post. */
 
 export interface IPost extends Entry<IPostFields> {
   sys: {
@@ -42,46 +60,7 @@ export interface IPost extends Entry<IPostFields> {
   };
 }
 
-export interface ITalkFields {
-  /** Title */
-  title: string;
-
-  /** Slug */
-  slug?: string | undefined;
-
-  /** Emoji */
-  emoji: string;
-
-  /** Presentation Date */
-  date?: string | undefined;
-
-  /** Description */
-  description?: string | undefined;
-
-  /** SpeakerDeck URL */
-  url?: string | undefined;
-}
-
-/** A conference talk. */
-
-export interface ITalk extends Entry<ITalkFields> {
-  sys: {
-    id: string;
-    type: string;
-    createdAt: string;
-    updatedAt: string;
-    locale: string;
-    contentType: {
-      sys: {
-        id: 'talk';
-        linkType: 'ContentType';
-        type: 'Link';
-      };
-    };
-  };
-}
-
-export type CONTENT_TYPE = 'post' | 'talk';
+export type CONTENT_TYPE = 'post';
 
 export type LOCALE_CODE = 'en-US';
 

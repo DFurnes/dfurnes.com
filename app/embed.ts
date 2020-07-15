@@ -14,7 +14,11 @@ const fetchEmbed = promisify(oembed.fetch);
  *
  * @param url
  */
-export async function getEmbed(url: string): Promise<string> {
+export async function getEmbed(url: string): Promise<string | null> {
+  if (!url) {
+    return null;
+  }
+
   const result = await fetchEmbed(url);
 
   return result.html;

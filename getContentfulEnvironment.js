@@ -8,6 +8,6 @@ module.exports = function () {
   });
 
   return contentfulClient
-    .getSpace(process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID)
-    .then((space) => space.getEnvironment('master'));
+    .getSpace(process.env.CONTENTFUL_SPACE_ID)
+    .then(space => space.getEnvironment('master'));
 };

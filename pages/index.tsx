@@ -3,24 +3,26 @@ import Link from 'next/link';
 import tw from 'twin.macro';
 import { InferGetStaticPropsType, GetStaticPropsContext } from 'next';
 
+import NoteLink from 'components/NoteLink';
 import Layout, { Footer } from 'components/Layout';
 import Logo from 'components/Logo';
 import PreviewBanner from 'components/PreviewBanner';
-import Timestamp from 'components/Timestamp';
-import { getRecentPosts, getRecentTalks } from 'app/contentful';
-import { getRepositories } from 'app/github';
+import { getNotes } from 'app/contentful';
 
-const Section = tw.section`my-8`;
-const SectionHeading = tw.h1`font-sans text-xs font-bold uppercase mb-2 `;
-const Description = tw.span`font-sans text-xxs text-gray-400`;
+const Section = tw.ul`my-8`;
+const FootnoteLink = tw.a`block font-sans text-xs text-gray-500 underline hover:text-pink-500 border-b-0`;
 
 type PropTypes = InferGetStaticPropsType<typeof getStaticProps>;
 
-export default function Home({ preview, repos, posts, talks }: PropTypes) {
+export default function Home({ preview, notes }: PropTypes) {
   return (
     <Layout>
       <Head>
         <title>David Furnes</title>
+        <meta
+          name="description"
+          content="I like making things that make life better. I'm a software engineer at DoSomething.org, where I build tools to make social change fun."
+        />
       </Head>
       <PreviewBanner preview={preview} />
       <Logo />
@@ -29,51 +31,17 @@ export default function Home({ preview, repos, posts, talks }: PropTypes) {
         engineer at <a href="https://www.dosomething.org">DoSomething.org</a>,
         where I build tools to make social change fun.
       </p>
-      <Section>
-        <SectionHeading>Open Source:</SectionHeading>
-        <ul>
-          {repos.map(repo => (
-            <li key={repo.data.id}>
-              <a href={repo.data.homepage || repo.data.html_url}>
-                {repo.data.name}
-              </a>
-              <Description> {repo.data.description}</Description>
-            </li>
-          ))}
-        </ul>
+      <Section tw="pr-6">
+        {notes.map(note => (
+          <li tw="mb-3" key={note.fields.slug}>
+            <NoteLink note={note} />
+          </li>
+        ))}
       </Section>
       <Section tw="pr-6">
-        <SectionHeading>Writing:</SectionHeading>
-        <ul>
-          {posts.map(post => (
-            <li key={post.fields.slug}>
-              <Link href="/posts/[post]" as={`/posts/${post.fields.slug}`}>
-                <a>{post.fields.title}</a>
-              </Link>
-              <Description>
-                {' '}
-                {post.fields.emoji} <Timestamp dateString={post.fields.date} />
-              </Description>
-            </li>
-          ))}
-        </ul>
-      </Section>
-      <Section tw="pr-6">
-        <SectionHeading>Talks:</SectionHeading>
-        <ul>
-          {talks.map(talk => (
-            <li key={talk.fields.slug}>
-              <Link href="/talks/[talk]" as={`/talks/${talk.fields.slug}`}>
-                <a>{talk.fields.title}</a>
-              </Link>
-              <Description>
-                {' '}
-                {talk.fields.emoji}{' '}
-                <Timestamp format="LLLL yyyy" dateString={talk.fields.date} />
-              </Description>
-            </li>
-          ))}
-        </ul>
+        <Link href="/notes/[slug]" as="/notes/about" passHref>
+          <FootnoteLink>about this website</FootnoteLink>
+        </Link>
       </Section>
       <Footer />
     </Layout>
@@ -81,19 +49,10 @@ export default function Home({ preview, repos, posts, talks }: PropTypes) {
 }
 
 export const getStaticProps = async (context: GetStaticPropsContext) => {
-  const PINNED_REPOSITORIES = [
-    'dfurnes/hey',
-    'dfurnes/purer',
-    'dfurnes/sasslint',
-    'dfurnes/sasstree',
-  ];
-
   return {
     props: {
       preview: Boolean(context.preview),
-      repos: await getRepositories(PINNED_REPOSITORIES),
-      posts: await getRecentPosts(context.preview),
-      talks: await getRecentTalks(context.preview),
+      notes: await getNotes(context.preview),
     },
   };
 };

@@ -23,12 +23,11 @@
     "@contentful/rich-text-types": "^14.1.1",
     "@emotion/core": "^10.0.28",
     "@emotion/styled": "^10.0.27",
-    "@octokit/request": "^5.4.5",
-    "@octokit/rest": "^18.0.0",
     "@types/gtag.js": "0.0.3",
     "contentful": "^7.14.5",
     "date-fns": "^2.14.0",
     "dom-confetti": "^0.2.2",
+    "lodash": "^4.17.19",
     "next": "^9.4.4",
     "oembetter": "^0.1.22",
     "react": "^16.13.1",
@@ -51,7 +50,6 @@
     "husky": "^4.2.5",
     "prettier": "^2.0.5",
     "pretty-quick": "^2.0.1",
-    "sass": "^1.26.9",
     "typescript": "^3.9.5"
   }
 }

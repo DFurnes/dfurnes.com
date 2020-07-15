@@ -26,7 +26,7 @@ export const FooterIcon = ({ styles = null, title, href, Icon }) => (
     title={title}
     href={href}
     css={[
-      tw`fill-current text-gray-200 dark:text-gray-600 hover:text-purple-500`,
+      tw`fill-current text-gray-200 dark:text-gray-600 hover:text-pink-500`,
       styles,
     ]}
   >

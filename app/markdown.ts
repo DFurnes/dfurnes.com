@@ -9,6 +9,10 @@ import remark from 'remark';
  * @param source - Markdown source
  */
 export default function markdown(source: string | null) {
+  if (!source) {
+    return null;
+  }
+
   const renderer = remark().use(html).use(highlight).use(footnotes);
   const { contents } = renderer.processSync(source);
 
