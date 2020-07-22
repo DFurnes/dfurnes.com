@@ -25,6 +25,7 @@ const styles = css`
     ${tw`text-gray-400`}
   }
 
+  .hljs-number,
   .hljs-keyword {
     ${tw`text-purple-500`}
   }
@@ -32,6 +33,11 @@ const styles = css`
   .hljs-string,
   .hljs-doctag {
     ${tw`text-pink-500`}
+  }
+
+  /** Custom markup: */
+  .aside {
+    ${tw`font-sans text-xs text-gray-500 mb-6`}
   }
 
   /** Remark Footnotes: */
@@ -56,6 +62,7 @@ const styles = css`
   }
 
   .footnote-backref {
+    ${tw`text-gray-500`}
     padding-left: 0.5em;
     border: 0;
   }

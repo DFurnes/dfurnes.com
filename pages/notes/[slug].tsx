@@ -38,18 +38,17 @@ export default function NotePage({
       <PreviewBanner preview={preview} />
       <Header emoji={note.fields.emoji} />
       <h1>{note.fields.title}</h1>
-      {note.fields.archived ? <ArchivedNotice note={note} /> : null}
-      <TextContent html={content} />
-      <br />
       {embed ? (
         <ResponsiveEmbed
           tw="my-8"
           dangerouslySetInnerHTML={{ __html: embed }}
         />
       ) : null}
+      {note.fields.archived ? <ArchivedNotice note={note} /> : null}
+      <TextContent html={content} />
       <aside
         css={[
-          tw`font-sans text-xs text-gray-500 mb-8`,
+          tw`font-sans text-xs text-gray-500 mt-8 mb-8`,
           css`
             div,
             p {
