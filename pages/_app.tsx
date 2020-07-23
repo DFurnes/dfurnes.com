@@ -6,6 +6,7 @@ import tw from 'twin.macro';
 
 import { handlePageview } from 'app/analytics';
 
+import './fonts.css';
 import 'tailwindcss/dist/base.min.css';
 
 const elements = {

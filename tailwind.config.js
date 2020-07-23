@@ -17,7 +17,13 @@ module.exports = {
         },
       },
       fontFamily: {
-        serif: ['Charter', 'Georgia', 'Cambria', 'serif'],
+        serif: [
+          'Charter',
+          'Georgia',
+          'Century Schoolbook L',
+          'Cambria',
+          'serif',
+        ],
       },
       fontSize: {
         xxs: '14px',

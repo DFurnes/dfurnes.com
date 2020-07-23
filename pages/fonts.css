@@ -1,0 +1,35 @@
+@font-face {
+  font-family: 'Charter';
+  src: local('Charter'), local('Bitstream Charter'),
+    url('~charter-webfont/fonts/charter_regular.woff') format('woff');
+  font-style: normal;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+}
+
+@font-face {
+  font-family: 'Charter';
+  src: local('Charter Italic'), local('Bitstream Charter Italic'),
+    url('~charter-webfont/fonts/charter_italic.woff') format('woff');
+  font-style: italic;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+}
+
+@font-face {
+  font-family: 'Charter';
+  src: local('Charter Bold'), local('Bitstream Charter Bold'),
+    url('~charter-webfont/fonts/charter_bold.woff') format('woff');
+  font-style: normal;
+  font-weight: 700;
+  text-rendering: optimizeLegibility;
+}
+
+@font-face {
+  font-family: 'Charter';
+  src: local('Charter Bold Italic'), local('Bitstream Charter Bold Italic'),
+    url('~charter-webfont/fonts/charter_bold_italic.woff') format('woff');
+  font-style: italic;
+  font-weight: 700;
+  text-rendering: optimizeLegibility;
+}
