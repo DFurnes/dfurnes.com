@@ -40,6 +40,14 @@ const styles = css`
     ${tw`font-sans text-xs text-gray-500 mb-6`}
   }
 
+  .paper {
+    ${tw`italic text-sm max-w-sm mx-auto`}
+  }
+
+  .paper em {
+    ${tw`text-gray-500`}
+  }
+
   /** Remark Footnotes: */
   .footnotes {
     ${tw`border-0 text-sm my-8`}
