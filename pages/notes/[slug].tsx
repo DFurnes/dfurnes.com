@@ -38,6 +38,9 @@ export default function NotePage({
       <PreviewBanner preview={preview} />
       <Header emoji={note.fields.emoji} />
       <h1>{note.fields.title}</h1>
+      <p tw="text-2xl md:text-3xl italic text-pink-500 max-w-lg mb-32 md:mb-48">
+        {note.fields.description}
+      </p>
       {embed ? (
         <ResponsiveEmbed
           tw="my-8"
