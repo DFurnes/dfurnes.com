@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import tw from 'twin.macro';
 
 /**
  * A 16:9 responsive embed container, based on Bootstrap's 'Responsive Embed'
@@ -7,20 +8,13 @@ import styled from '@emotion/styled';
  * Usage: <ResponsiveEmbed dangerouslySetInnerHTML={{ __html: embed }} />
  */
 export default styled.div`
-  position: relative;
-  display: block;
-  width: 100%;
-  padding: 0;
-  padding-top: 56.25%;
-  overflow: hidden;
+  ${tw`block relative w-full bg-gray-100 dark:bg-gray-800
+       overflow-hidden rounded-lg`}
+
+  /* Maintain 16:19 aspect ratio! */
+  padding: 56.25% 0 0 0;
 
   iframe {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
+    ${tw`absolute inset-0 w-full h-full border-none`}
   }
 `;
