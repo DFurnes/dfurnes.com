@@ -2,7 +2,6 @@ import Link from 'next/link';
 import tw from 'twin.macro';
 
 import TwitterIcon from './icons/twitter.svg';
-import InstagramIcon from './icons/instagram.svg';
 import GithubIcon from './icons/github.svg';
 import KeyIcon from './icons/key.svg';
 
@@ -30,7 +29,7 @@ export const FooterIcon = ({ styles = null, title, href, Icon }) => (
       styles,
     ]}
   >
-    <Icon width={24} height={24} />
+    <Icon width={22} height={22} />
   </a>
 );
 
@@ -42,13 +41,7 @@ export const Footer = () => (
           Icon={TwitterIcon}
           title="@dfurnes on Twitter"
           href="https://twitter.com/dfurnes"
-        />
-      </li>
-      <li tw="float-left mr-3">
-        <FooterIcon
-          Icon={InstagramIcon}
-          title="@davidfurnes on Instagram"
-          href="https://www.instagram.com/davidfurnes"
+          styles={tw`hover:text-blue-500`}
         />
       </li>
       <li tw="float-left mr-3">
@@ -56,14 +49,15 @@ export const Footer = () => (
           Icon={GithubIcon}
           title="@dfurnes on GitHub"
           href="https://github.com/dfurnes"
+          styles={tw`hover:text-black dark:hover:text-white`}
         />
       </li>
-      <li tw="float-right ml-3">
+      <li tw="float-left mr-3">
         <FooterIcon
           Icon={KeyIcon}
           title="@dfurnes on Keybase"
           href="https://keybase.io/dfurnes"
-          styles={tw`text-gold dark:text-gold hover:text-black hover:dark:text-white`}
+          styles={tw`hover:text-gold`}
         />
       </li>
     </ul>
