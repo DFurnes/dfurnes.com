@@ -39,7 +39,7 @@ export default function Home({ preview, notes }: PropTypes) {
         ))}
       </Section>
       <Section tw="pr-6">
-        <Link href="/notes/[slug]" as="/notes/about" passHref>
+        <Link href="/notes/about" passHref>
           <FootnoteLink>about this website</FootnoteLink>
         </Link>
       </Section>
