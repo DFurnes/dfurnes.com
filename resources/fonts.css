@@ -5,6 +5,7 @@
   font-style: normal;
   font-weight: 400;
   text-rendering: optimizeLegibility;
+  font-display: swap;
 }
 
 @font-face {
@@ -14,6 +15,7 @@
   font-style: italic;
   font-weight: 400;
   text-rendering: optimizeLegibility;
+  font-display: swap;
 }
 
 @font-face {
@@ -23,6 +25,7 @@
   font-style: normal;
   font-weight: 700;
   text-rendering: optimizeLegibility;
+  font-display: swap;
 }
 
 @font-face {
@@ -32,4 +35,5 @@
   font-style: italic;
   font-weight: 700;
   text-rendering: optimizeLegibility;
+  font-display: swap;
 }
