@@ -1,10 +1,18 @@
 module.exports = {
   /**
-   * Configure SVG loader for icon components:
+   * Enable experimental Next.js features.
+   */
+  future: {
+    webpack5: true,
+  },
+
+  /**
+   * Configure Webpack.
    *
    * @param {import('webpack').Configuration} config
    */
   webpack: (config, { isServer }) => {
+    // Configure SVG loader for icon components:
     config.module.rules.push({
       test: /\.svg$/,
       exclude: /node_modules/,
@@ -12,9 +20,7 @@ module.exports = {
     });
 
     if (!isServer) {
-      // Unset client-side javascript that only works server-side
-      // https://github.com/vercel/next.js/issues/7755#issuecomment-508633125
-      config.node = { fs: 'empty', module: 'empty' };
+      config.resolve.fallback.fs = false;
     }
 
     return config;
