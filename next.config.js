@@ -1,6 +1,8 @@
 module.exports = {
   /**
    * Configure SVG loader for icon components:
+   *
+   * @param {import('webpack').Configuration} config
    */
   webpack: (config, { isServer }) => {
     config.module.rules.push({
