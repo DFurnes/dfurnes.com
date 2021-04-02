@@ -1,10 +1,6 @@
 import { AppProps } from 'next/app';
-import { Router } from 'next/router';
 import { Global } from '@emotion/react';
-import { useEffect } from 'react';
 import tw, { GlobalStyles, css } from 'twin.macro';
-
-import { handlePageview } from 'app/analytics';
 
 import 'resources/fonts.css';
 
@@ -55,12 +51,6 @@ const combinations = css`
 `;
 
 function MyApp({ Component, pageProps }: AppProps) {
-  useEffect(() => {
-    // Register Google analytics pageview tracking.
-    Router.events.on('routeChangeComplete', handlePageview);
-    return () => Router.events.off('routeChangeComplete', handlePageview);
-  }, []);
-
   return (
     <>
       <GlobalStyles />
