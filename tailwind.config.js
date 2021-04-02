@@ -1,20 +1,23 @@
+const colors = require('tailwindcss/colors');
+
 module.exports = {
   theme: {
+    fontSize: {
+      xxs: '14px',
+      xs: '0.75rem',
+      sm: '0.875rem',
+      base: '1rem',
+      lg: '1.125rem',
+      xl: '1.25rem',
+      '2xl': '1.5rem',
+      '3xl': '1.875rem',
+      '4xl': '2.25rem',
+      '5xl': '3rem',
+      '6xl': '4rem',
+    },
     extend: {
       colors: {
-        gold: '#FFD700',
-        gray: {
-          50: '#fafafa',
-          100: '#e6e6e2',
-          200: '#cac9c0',
-          300: '#afaea2',
-          400: '#929285',
-          500: '#76766a',
-          600: '#5d5d52',
-          700: '#454540',
-          800: '#2e2e2a',
-          900: '#171716',
-        },
+        gray: colors.warmGray,
       },
       fontFamily: {
         serif: [
@@ -25,14 +28,9 @@ module.exports = {
           'serif',
         ],
       },
-      fontSize: {
-        xxs: '14px',
-      },
-      screens: {
-        dark: { raw: '(prefers-color-scheme: dark)' },
-      },
     },
   },
+  darkMode: 'media',
   variants: {},
   plugins: [],
 };

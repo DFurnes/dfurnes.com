@@ -57,7 +57,7 @@ export const Footer = () => (
           Icon={KeyIcon}
           title="@dfurnes on Keybase"
           href="https://keybase.io/dfurnes"
-          styles={tw`hover:text-gold`}
+          styles={tw`hover:text-yellow-400`}
         />
       </li>
     </ul>

@@ -12,9 +12,8 @@ import ResponsiveEmbed from 'components/ResponsiveEmbed';
 import TextContent from 'components/TextContent';
 import { getAllNoteSlugs, getNote } from 'app/contentful';
 import { getEmbed } from 'app/embed';
-import { css } from '@emotion/core';
 
-import tw from 'twin.macro';
+import tw, { css } from 'twin.macro';
 
 type PropTypes = InferGetStaticPropsType<typeof getStaticProps>;
 
@@ -38,7 +37,7 @@ export default function NotePage({
       <PreviewBanner preview={preview} />
       <Header emoji={note.fields.emoji} />
       <h1>{note.fields.title}</h1>
-      <p tw="text-2xl md:text-3xl italic text-pink-500 max-w-lg mb-32 md:mb-48">
+      <p tw="text-2xl md:text-3xl italic text-pink-400 max-w-lg mb-32 md:mb-48">
         {note.fields.description}
       </p>
       {embed ? (

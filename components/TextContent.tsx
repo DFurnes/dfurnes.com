@@ -1,5 +1,4 @@
-import tw from 'twin.macro';
-import { css } from '@emotion/core';
+import tw, { css } from 'twin.macro';
 
 const styles = css`
   /** Allow the browser to hyphenate where it makes sense. */

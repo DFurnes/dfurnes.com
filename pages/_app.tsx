@@ -1,13 +1,12 @@
 import { AppProps } from 'next/app';
 import { Router } from 'next/router';
-import { Global, css } from '@emotion/core';
+import { Global } from '@emotion/react';
 import { useEffect } from 'react';
-import tw from 'twin.macro';
+import tw, { GlobalStyles, css } from 'twin.macro';
 
 import { handlePageview } from 'app/analytics';
 
 import 'resources/fonts.css';
-import 'tailwindcss/dist/base.min.css';
 
 const elements = {
   body: tw`bg-white dark:bg-black font-serif text-lg text-black dark:text-gray-100`,
@@ -17,7 +16,7 @@ const elements = {
   h4: tw`text-gray-500 italic`,
   blockquote: tw`italic p-8`,
   strong: tw`dark:text-white`,
-  a: tw`no-underline text-black dark:text-white hover:text-pink-500 
+  a: tw`no-underline text-black dark:text-white hover:text-pink-500
         border-b-2 border-gray-100 dark:border-gray-700 hover:border-pink-500`,
 };
 
@@ -64,6 +63,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <>
+      <GlobalStyles />
       <Global styles={[elements, combinations]} />
       <Component {...pageProps} />
     </>

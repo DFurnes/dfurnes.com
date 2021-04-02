@@ -10,7 +10,7 @@ export default function PreviewBar({ note }) {
     <Alert>
       <p>
         <strong>
-          <HistoryIcon tw="inline-block align-text-bottom fill-current text-orange-500 flex-initial mr-1 h-4" />
+          <HistoryIcon tw="inline-block align-text-bottom fill-current text-yellow-500 flex-initial mr-1 h-4" />
           May be outdated!
         </strong>{' '}
         This note was last updated{' '}

@@ -12,45 +12,58 @@
   },
   "babel": {
     "presets": [
-      "next/babel",
-      "@emotion/babel-preset-css-prop"
+      [
+        "next/babel",
+        {
+          "preset-react": {
+            "runtime": "automatic",
+            "importSource": "@emotion/react"
+          }
+        }
+      ]
     ],
     "plugins": [
+      "@emotion/babel-plugin",
       "babel-plugin-macros"
     ]
   },
+  "babelMacros": {
+    "twin": {
+      "preset": "emotion"
+    }
+  },
   "dependencies": {
-    "@contentful/rich-text-types": "^14.1.1",
-    "@emotion/core": "^10.0.35",
-    "@emotion/styled": "^10.0.27",
-    "@types/gtag.js": "0.0.3",
+    "@contentful/rich-text-types": "^11.0.0",
+    "@emotion/react": "^11.1.5",
+    "@emotion/styled": "^11.1.5",
+    "@types/gtag.js": "0.0.4",
     "charter-webfont": "^3.0.2",
-    "contentful": "^7.14.8",
-    "date-fns": "^2.16.1",
+    "contentful": "^7.15.2",
+    "date-fns": "^2.19.0",
     "dom-confetti": "^0.2.2",
-    "lodash": "^4.17.20",
-    "next": "^10.0.0",
-    "oembetter": "^0.1.22",
-    "react": "^16.13.1",
-    "react-dom": "^16.1.1",
+    "lodash": "^4.17.21",
+    "next": "^10.1.2",
+    "oembetter": "^0.1.23",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "react-svg-loader": "^3.0.3",
     "remark": "^13.0.0",
     "remark-footnotes": "^3.0.0",
     "remark-highlight.js": "^6.0.0",
     "remark-html": "^13.0.1",
-    "tailwindcss": "^1.9.6",
-    "twin.macro": "^1.11.1"
+    "tailwindcss": "^2.0.4",
+    "twin.macro": "^2.3.2"
   },
   "devDependencies": {
-    "@emotion/babel-preset-css-prop": "^10.0.27",
-    "@types/node": "^14.14.5",
-    "@types/react": "^16.9.54",
-    "contentful-management": "^6.1.2",
-    "contentful-typescript-codegen": "^3.2.1",
+    "@emotion/babel-plugin": "^11.2.0",
+    "@types/node": "^14.14.37",
+    "@types/react": "^16.14.5",
+    "contentful-management": "^6.3.2",
+    "contentful-typescript-codegen": "^3.2.2",
     "dotenv": "^8.2.0",
-    "husky": "^4.3.0",
-    "prettier": "^2.1.2",
+    "husky": "^4.3.8",
+    "prettier": "^2.2.1",
     "pretty-quick": "^3.1.0",
-    "typescript": "^4.0.5"
+    "typescript": "^4.2.3"
   }
 }
