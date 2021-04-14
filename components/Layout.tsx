@@ -1,11 +1,15 @@
+import { useTheme } from 'next-themes';
 import Link from 'next/link';
 import tw from 'twin.macro';
 
+import DarkModeIcon from './icons/dark-mode.svg';
 import TwitterIcon from './icons/twitter.svg';
 import GithubIcon from './icons/github.svg';
 import KeyIcon from './icons/key.svg';
 
 export default tw.div`max-w-screen-md mx-auto mb-8 md:my-12 p-3 md:p-6`;
+
+const footerIconStyles = tw`fill-current text-gray-200 dark:text-gray-600`;
 
 export const Header = ({ emoji }) => (
   <header tw="font-sans text-xs text-gray-500 mb-8">
@@ -21,17 +25,27 @@ export const Header = ({ emoji }) => (
 );
 
 export const FooterIcon = ({ styles = null, title, href, Icon }) => (
-  <a
-    title={title}
-    href={href}
-    css={[
-      tw`fill-current text-gray-200 dark:text-gray-600 hover:text-pink-500`,
-      styles,
-    ]}
-  >
+  <a title={title} href={href} css={[footerIconStyles, styles]}>
     <Icon width={22} height={22} />
   </a>
 );
+
+export const DarkModeToggle = () => {
+  const { theme, setTheme } = useTheme();
+
+  return (
+    <button
+      title="Toggle dark mode"
+      onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+      css={[
+        footerIconStyles,
+        tw`hover:text-purple-600 dark:hover:text-yellow-300`,
+      ]}
+    >
+      <DarkModeIcon width={22} height={22} />
+    </button>
+  );
+};
 
 export const Footer = () => (
   <footer tw="mt-16">
@@ -59,6 +73,9 @@ export const Footer = () => (
           href="https://keybase.io/dfurnes"
           styles={tw`hover:text-yellow-400`}
         />
+      </li>
+      <li tw="float-left mr-3">
+        <DarkModeToggle />
       </li>
     </ul>
   </footer>

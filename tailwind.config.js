@@ -30,7 +30,7 @@ module.exports = {
       },
     },
   },
-  darkMode: 'media',
+  darkMode: 'class',
   variants: {},
   plugins: [],
 };

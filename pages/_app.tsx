@@ -1,5 +1,6 @@
 import { AppProps } from 'next/app';
 import { Global } from '@emotion/react';
+import { ThemeProvider } from 'next-themes';
 import tw, { GlobalStyles, css } from 'twin.macro';
 
 import 'resources/fonts.css';
@@ -52,11 +53,11 @@ const combinations = css`
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <>
+    <ThemeProvider attribute="class">
       <GlobalStyles />
       <Global styles={[elements, combinations]} />
       <Component {...pageProps} />
-    </>
+    </ThemeProvider>
   );
 }
 

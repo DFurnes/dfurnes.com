@@ -10,7 +10,7 @@ import PreviewBanner from 'components/PreviewBanner';
 import { getNotes } from 'app/contentful';
 
 const Section = tw.ul`my-8`;
-const FootnoteLink = tw.a`block font-sans text-xs text-gray-500 underline hover:text-pink-500 border-b-0`;
+const FootnoteLink = tw.a`block font-sans text-xs text-gray-500 dark:text-gray-400 underline hover:text-pink-500 border-b-0`;
 
 type PropTypes = InferGetStaticPropsType<typeof getStaticProps>;
 
