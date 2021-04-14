@@ -31,12 +31,12 @@ export const FooterIcon = ({ styles = null, title, href, Icon }) => (
 );
 
 export const DarkModeToggle = () => {
-  const { theme, setTheme } = useTheme();
+  const { resolvedTheme, setTheme } = useTheme();
 
   return (
     <button
       title="Toggle dark mode"
-      onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+      onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
       css={[
         footerIconStyles,
         tw`hover:text-purple-600 dark:hover:text-yellow-300`,
