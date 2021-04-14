@@ -9,7 +9,9 @@ import KeyIcon from './icons/key.svg';
 
 export default tw.div`max-w-screen-md mx-auto mb-8 md:my-12 p-3 md:p-6`;
 
-const footerIconStyles = tw`fill-current text-gray-400 dark:text-gray-300`;
+const ICON_SIZE = 18;
+
+const footerIconStyles = tw`fill-current text-gray-400`;
 
 export const Header = ({ emoji }) => (
   <header tw="font-sans text-xs text-gray-500 mb-8">
@@ -26,7 +28,7 @@ export const Header = ({ emoji }) => (
 
 export const FooterIcon = ({ styles = null, title, href, Icon }) => (
   <a title={title} href={href} css={[footerIconStyles, styles]}>
-    <Icon width={22} height={22} />
+    <Icon width={ICON_SIZE} height={ICON_SIZE} />
   </a>
 );
 
@@ -42,7 +44,7 @@ export const DarkModeToggle = () => {
         tw`hover:text-purple-600 dark:hover:text-yellow-300`,
       ]}
     >
-      <DarkModeIcon width={22} height={22} />
+      <DarkModeIcon width={ICON_SIZE} height={ICON_SIZE} />
     </button>
   );
 };
