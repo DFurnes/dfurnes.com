@@ -9,7 +9,7 @@ import KeyIcon from './icons/key.svg';
 
 export default tw.div`max-w-screen-md mx-auto mb-8 md:my-12 p-3 md:p-6`;
 
-const footerIconStyles = tw`fill-current text-gray-200 dark:text-gray-600`;
+const footerIconStyles = tw`fill-current text-gray-400 dark:text-gray-300`;
 
 export const Header = ({ emoji }) => (
   <header tw="font-sans text-xs text-gray-500 mb-8">
@@ -74,7 +74,7 @@ export const Footer = () => (
           styles={tw`hover:text-yellow-400`}
         />
       </li>
-      <li tw="float-left mr-3">
+      <li tw="float-right ml-3">
         <DarkModeToggle />
       </li>
     </ul>
