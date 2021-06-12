@@ -37,13 +37,13 @@
     "@emotion/react": "^11.4.0",
     "@emotion/styled": "^11.3.0",
     "charter-webfont": "^3.0.2",
-    "contentful": "^8.3.5",
-    "date-fns": "^2.21.3",
+    "contentful": "^8.4.0",
+    "date-fns": "^2.22.1",
     "dom-confetti": "^0.2.2",
     "lodash": "^4.17.21",
-    "next": "^10.2.2",
+    "next": "^10.2.3",
     "next-themes": "0.0.14",
-    "oembetter": "^0.1.23",
+    "oembetter": "^1.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-svg-loader": "^3.0.3",
@@ -51,17 +51,17 @@
     "remark-footnotes": "^3.0.0",
     "remark-highlight.js": "^6.0.0",
     "remark-html": "^13.0.1",
-    "tailwindcss": "^2.1.2",
+    "tailwindcss": "^2.1.4",
     "twin.macro": "^2.4.2"
   },
   "devDependencies": {
     "@emotion/babel-plugin": "^11.3.0",
-    "@types/node": "^14.17.0",
-    "@types/react": "^17.0.6",
-    "contentful-management": "^7.22.2",
+    "@types/node": "^14.17.3",
+    "@types/react": "^17.0.11",
+    "contentful-management": "^7.24.0",
     "contentful-typescript-codegen": "^3.2.2",
-    "dotenv": "^8.6.0",
-    "prettier": "^2.3.0",
-    "typescript": "^4.2.4"
+    "dotenv": "^10.0.0",
+    "prettier": "^2.3.1",
+    "typescript": "^4.3.2"
   }
 }

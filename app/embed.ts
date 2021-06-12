@@ -5,7 +5,7 @@ import { promisify } from 'util';
 // and allow list (plus Speaker Deck!) <https://git.io/JJkJ6>
 const oembed = OEmbetter();
 oembed.endpoints(oembed.suggestedEndpoints);
-oembed.whitelist([...oembed.suggestedWhitelist, 'speakerdeck.com']);
+oembed.allowlist([...oembed.suggestedAllowlist, 'speakerdeck.com']);
 
 const fetchEmbed = promisify(oembed.fetch);
 
