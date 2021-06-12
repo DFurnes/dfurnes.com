@@ -21,7 +21,7 @@ const ConfettiCannon = styled.div`
 export default function Logo() {
   const el = useRef(null);
 
-  const onClick = e => {
+  const onClick = (e: React.MouseEvent) => {
     e.preventDefault();
 
     confetti(el.current, SURPRISE);
@@ -30,10 +30,10 @@ export default function Logo() {
   return (
     <h1>
       <a
-        href="https://www.dfurnes.com"
         data-splitbee-event="Confetti"
         tw="relative cursor-pointer"
         onClick={onClick}
+        href="#"
       >
         David Furnes
         <ConfettiCannon ref={el} />
