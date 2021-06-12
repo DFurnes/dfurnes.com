@@ -10,7 +10,7 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          {process.env.NEXT_PUBLIC_VERCEL_ENV === 'production' ? (
+          {process.env.APP_ENV === 'production' ? (
             <script async data-api="/_hive" src="/bee.js"></script>
           ) : null}
         </Head>
