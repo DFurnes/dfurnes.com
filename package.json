@@ -4,28 +4,12 @@
     "dev": "next dev",
     "start": "next start",
     "build": "next build",
+    "lint": "next lint",
     "contentful:schema": "contentful-typescript-codegen --output app/schema.ts"
   },
   "prettier": {
     "singleQuote": true,
     "arrowParens": "avoid"
-  },
-  "babel": {
-    "presets": [
-      [
-        "next/babel",
-        {
-          "preset-react": {
-            "runtime": "automatic",
-            "importSource": "@emotion/react"
-          }
-        }
-      ]
-    ],
-    "plugins": [
-      "@emotion/babel-plugin",
-      "babel-plugin-macros"
-    ]
   },
   "babelMacros": {
     "twin": {
@@ -34,34 +18,40 @@
   },
   "dependencies": {
     "@contentful/rich-text-types": "^14.1.2",
-    "@emotion/react": "^11.4.0",
-    "@emotion/styled": "^11.3.0",
+    "@emotion/react": "^11.7.0",
+    "@emotion/styled": "^11.6.0",
     "charter-webfont": "^3.0.2",
-    "contentful": "^8.4.0",
-    "date-fns": "^2.22.1",
+    "contentful": "^8.5.8",
+    "date-fns": "^2.27.0",
     "dom-confetti": "^0.2.2",
+    "highlight.js": "^11.3.1",
     "lodash": "^4.17.21",
-    "next": "^10.2.3",
+    "next": "^12.0.7",
     "next-themes": "0.0.14",
-    "oembetter": "^1.0.0",
+    "oembetter": "^1.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-svg-loader": "^3.0.3",
-    "remark": "^13.0.0",
-    "remark-footnotes": "^3.0.0",
-    "remark-highlight.js": "^6.0.0",
-    "remark-html": "^13.0.1",
-    "tailwindcss": "^2.1.4",
-    "twin.macro": "^2.4.2"
+    "rehype-highlight": "^5.0.1",
+    "rehype-raw": "^6.1.0",
+    "rehype-stringify": "^9.0.2",
+    "remark-gfm": "^3.0.1",
+    "remark-parse": "^10.0.1",
+    "remark-rehype": "^10.1.0",
+    "tailwindcss": "^2.2.19",
+    "twin.macro": "^2.8.2",
+    "unified": "^10.1.1"
   },
   "devDependencies": {
     "@emotion/babel-plugin": "^11.3.0",
-    "@types/node": "^14.17.3",
-    "@types/react": "^17.0.11",
-    "contentful-management": "^7.24.0",
-    "contentful-typescript-codegen": "^3.2.2",
+    "@types/node": "^14.18.0",
+    "@types/react": "^17.0.37",
+    "contentful-management": "^7.45.7",
+    "contentful-typescript-codegen": "^3.2.3",
     "dotenv": "^10.0.0",
-    "prettier": "^2.3.1",
-    "typescript": "^4.3.2"
+    "eslint": "8.4.1",
+    "eslint-config-next": "12.0.7",
+    "prettier": "^2.5.1",
+    "typescript": "^4.5.3"
   }
 }

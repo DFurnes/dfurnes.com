@@ -1,7 +1,12 @@
-import footnotes from 'remark-footnotes';
-import highlight from 'remark-highlight.js';
-import html from 'remark-html';
-import remark from 'remark';
+import githubMarkdown from 'remark-gfm';
+import highlight from 'rehype-highlight';
+import parseMarkdown from 'remark-parse';
+import stringify from 'rehype-stringify';
+import toRehype from 'remark-rehype';
+import withRawHtml from 'rehype-raw';
+import { unified } from 'unified';
+
+import vim from 'highlight.js/lib/languages/vim';
 
 /**
  * Process the given Markdown source into HTML.
@@ -13,8 +18,15 @@ export default function markdown(source: string | null) {
     return null;
   }
 
-  const renderer = remark().use(html).use(highlight).use(footnotes);
-  const { contents } = renderer.processSync(source);
+  const renderer = unified()
+    .use(parseMarkdown)
+    .use(githubMarkdown)
+    .use(toRehype, { allowDangerousHtml: true })
+    .use(withRawHtml)
+    .use(highlight, { languages: { vim } })
+    .use(stringify);
 
-  return contents as string;
+  const file = renderer.processSync(source);
+
+  return String(file);
 }

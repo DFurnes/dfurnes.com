@@ -1,17 +1,5 @@
 module.exports = {
   /**
-   * Configure serverless target for Netlify.
-   */
-  target: 'serverless',
-
-  /**
-   * Enable experimental Next.js features.
-   */
-  future: {
-    webpack5: true
-  },
-
-  /**
    * Configure Webpack.
    *
    * @param {import('webpack').Configuration} config
@@ -21,7 +9,7 @@ module.exports = {
     config.module.rules.push({
       test: /\.svg$/,
       exclude: /node_modules/,
-      use: 'react-svg-loader'
+      use: 'react-svg-loader',
     });
 
     if (!isServer) {
@@ -38,12 +26,12 @@ module.exports = {
     return [
       {
         source: '/bee.js',
-        destination: 'https://cdn.splitbee.io/sb.js'
+        destination: 'https://cdn.splitbee.io/sb.js',
       },
       {
         source: '/_hive/:slug',
-        destination: 'https://hive.splitbee.io/:slug'
-      }
+        destination: 'https://hive.splitbee.io/:slug',
+      },
     ];
-  }
+  },
 };

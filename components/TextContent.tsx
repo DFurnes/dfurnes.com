@@ -49,11 +49,7 @@ const styles = css`
 
   /** Remark Footnotes: */
   .footnotes {
-    ${tw`border-0 text-sm my-8`}
-  }
-
-  .footnotes hr {
-    ${tw`mb-8 border-gray-100 dark:border-gray-800`}
+    ${tw`font-sans text-xs border-0 my-8`}
   }
 
   .footnotes ol {
@@ -64,14 +60,14 @@ const styles = css`
     ${tw`mb-3`}
   }
 
-  .footnote-ref {
+  .data-footnote-backref {
+    ${tw`text-gray-500 hover:text-pink-500`}
+    padding-left: 0.5em;
     border: 0;
   }
 
-  .footnote-backref {
-    ${tw`text-gray-500`}
-    padding-left: 0.5em;
-    border: 0;
+  .sr-only {
+    ${tw`sr-only`}
   }
 `;
 

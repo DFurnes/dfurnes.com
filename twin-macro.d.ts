@@ -1,3 +1,5 @@
+/// <reference types="@emotion/react/types/css-prop" />
+
 import 'twin.macro';
 import styledImport from '@emotion/styled';
 import { css as cssImport } from '@emotion/react';

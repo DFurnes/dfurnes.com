@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 
-export default async (req: NextApiRequest, res: NextApiResponse) => {
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { path = '/', token } = req.query;
 
   // Keep it secret, keep it safe!
@@ -18,4 +18,4 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 
   res.writeHead(307, { Location: path });
   res.end();
-};
+}
