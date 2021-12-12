@@ -2,6 +2,8 @@ import { useTheme } from 'next-themes';
 import Link from 'next/link';
 import tw from 'twin.macro';
 
+import Timestamp from 'components/Timestamp';
+
 import DarkModeIcon from './icons/dark-mode.svg';
 import TwitterIcon from './icons/twitter.svg';
 import GithubIcon from './icons/github.svg';
@@ -18,11 +20,7 @@ export const Header = ({ emoji }) => (
     <Link href="/">
       <a>David Furnes</a>
     </Link>{' '}
-    is an engineer at{' '}
-    <a tw="text-gray-500" href="https://www.dosomething.org">
-      DoSomething.org
-    </a>
-    , where he builds tools to make social change fun. {emoji}
+    is a software engineer based in Brooklyn, New York. {emoji}
   </header>
 );
 
