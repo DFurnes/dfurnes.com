@@ -2,6 +2,7 @@ import { AppProps } from 'next/app';
 import { Global } from '@emotion/react';
 import { ThemeProvider } from 'next-themes';
 import tw, { GlobalStyles, css } from 'twin.macro';
+import Script from 'next/script';
 
 import 'resources/fonts.css';
 
@@ -57,6 +58,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <GlobalStyles />
       <Global styles={[elements, combinations]} />
       <Component {...pageProps} />
+      <Script async data-api="/_hive" src="/bee.js"></Script>
     </ThemeProvider>
   );
 }
