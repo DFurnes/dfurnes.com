@@ -7,7 +7,7 @@ export default function NoteLink({ note }) {
   return (
     <>
       <Link href={`/notes/${note.fields.slug}`} passHref>
-        <a>{note.fields.title}</a>
+        {note.fields.title}
       </Link>{' '}
       {note.fields.emoji}
       <Description>{note.fields.description}</Description>

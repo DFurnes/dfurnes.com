@@ -64,7 +64,9 @@ export default function NotePage({
             Written on <Timestamp dateString={note.fields.date} />.{' '}
           </>
         ) : null}
-        <div dangerouslySetInnerHTML={{ __html: footnote }} />
+        {footnote ? (
+          <div dangerouslySetInnerHTML={{ __html: footnote }} />
+        ) : null}
       </aside>
       <Footer />
     </Layout>
@@ -80,8 +82,9 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps = async (context: GetStaticPropsContext) => {
   const { params, preview } = context;
+  const slug = String(params?.slug);
 
-  const note = await getNote(params.slug, preview);
+  const note = slug ? await getNote(slug, preview) : null;
 
   return {
     props: {

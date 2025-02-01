@@ -17,7 +17,7 @@ type PropTypes = InferGetStaticPropsType<typeof getStaticProps>;
 
 export default function Home({ preview, notes }: PropTypes) {
   const postsByYear = groupBy(notes, note =>
-    new Date(note.fields.date).getFullYear()
+    new Date(note.fields.date).getFullYear(),
   );
 
   const years = keys(postsByYear).sort((a, b) => b - a);
@@ -28,7 +28,7 @@ export default function Home({ preview, notes }: PropTypes) {
         <title>David Furnes</title>
         <meta
           name="description"
-          content="Software engineer at Stripe, working on JavaScript infrastructure. Previously, I built tools to power social change at DoSomething.org."
+          content="Software engineer at Stripe, working on developer infrastructure. Previously, I built tools to power social change at DoSomething.org."
         />
       </Head>
       <PreviewBanner preview={preview} />
@@ -36,7 +36,7 @@ export default function Home({ preview, notes }: PropTypes) {
         <Logo />
         <p tw="text-xl mt-8 mb-32 mr-3 italic">
           Software engineer at <a href="https://www.stripe.com">Stripe</a>,
-          working on JavaScript infrastructure. Previously, I built tools to
+          working on developer infrastructure. Previously, I built tools to
           power social change at{' '}
           <a href="https://www.dosomething.org">DoSomething.org</a>.
         </p>
@@ -52,7 +52,7 @@ export default function Home({ preview, notes }: PropTypes) {
         </Section>
       ))}
       <Section tw="pr-6">
-        <Link href="/notes/about" passHref>
+        <Link href="/notes/about" passHref legacyBehavior>
           <FootnoteLink>about this website</FootnoteLink>
         </Link>
       </Section>

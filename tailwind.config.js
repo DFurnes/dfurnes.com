@@ -17,7 +17,7 @@ module.exports = {
     },
     extend: {
       colors: {
-        gray: colors.warmGray,
+        gray: colors.stone,
       },
       fontFamily: {
         serif: [

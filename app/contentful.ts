@@ -9,13 +9,13 @@ export type Post = Entry<IPostFields>;
 export type PostCollection = EntryCollection<IPostFields>;
 
 const deliveryApi = createClient({
-  space: process.env.CONTENTFUL_SPACE_ID,
-  accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+  space: process.env.CONTENTFUL_SPACE_ID!,
+  accessToken: process.env.CONTENTFUL_ACCESS_TOKEN!,
 });
 
 const previewApi = createClient({
-  space: process.env.CONTENTFUL_SPACE_ID,
-  accessToken: process.env.CONTENTFUL_PREVIEW_TOKEN,
+  space: process.env.CONTENTFUL_SPACE_ID!,
+  accessToken: process.env.CONTENTFUL_PREVIEW_TOKEN!,
   host: 'preview.contentful.com',
 });
 
@@ -33,7 +33,7 @@ function contentful(preview = false) {
  *
  * @param slug
  */
-export async function getNote(slug, preview = false) {
+export async function getNote(slug: string, preview = false) {
   const results: PostCollection = await contentful(preview).getEntries({
     content_type: 'post',
     'fields.slug': slug,

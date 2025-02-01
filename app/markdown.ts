@@ -5,6 +5,7 @@ import stringify from 'rehype-stringify';
 import toRehype from 'remark-rehype';
 import withRawHtml from 'rehype-raw';
 import { unified } from 'unified';
+import { common } from 'lowlight';
 
 import vim from 'highlight.js/lib/languages/vim';
 
@@ -13,7 +14,7 @@ import vim from 'highlight.js/lib/languages/vim';
  *
  * @param source - Markdown source
  */
-export default function markdown(source: string | null) {
+export default function markdown(source?: string) {
   if (!source) {
     return null;
   }
@@ -23,7 +24,7 @@ export default function markdown(source: string | null) {
     .use(githubMarkdown)
     .use(toRehype, { allowDangerousHtml: true })
     .use(withRawHtml)
-    .use(highlight, { languages: { vim } })
+    .use(highlight, { languages: { ...common, vim } })
     .use(stringify);
 
   const file = renderer.processSync(source);

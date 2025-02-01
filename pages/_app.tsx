@@ -4,7 +4,7 @@ import { ThemeProvider } from 'next-themes';
 import tw, { GlobalStyles, css } from 'twin.macro';
 import Script from 'next/script';
 
-import 'resources/fonts.css';
+import 'charter-webfont/charter.css';
 
 const elements = {
   body: tw`bg-white dark:bg-black font-serif text-lg text-black dark:text-gray-100`,
@@ -14,8 +14,8 @@ const elements = {
   h4: tw`text-gray-500 italic`,
   blockquote: tw`italic p-8`,
   strong: tw`dark:text-white`,
-  a: tw`no-underline text-black dark:text-white hover:text-pink-500
-        border-b-2 border-gray-100 dark:border-gray-700 hover:border-pink-500`,
+  a: tw`no-underline text-black dark:text-white hover:text-pink-500!
+        border-b-2 border-gray-100 dark:border-gray-700 hover:border-pink-500!`,
 };
 
 const combinations = css`

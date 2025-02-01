@@ -17,11 +17,7 @@ export default function NotFound({ preview = false }) {
       <h1>Not Found</h1>
 
       <p>
-        That page seems to have gone missing.{' '}
-        <Link href="/">
-          <a>Try again</a>
-        </Link>
-        !
+        That page seems to have gone missing. <Link href="/">Try again</Link>!
       </p>
       <Footer />
     </Layout>

@@ -2,8 +2,6 @@ import { useTheme } from 'next-themes';
 import Link from 'next/link';
 import tw from 'twin.macro';
 
-import Timestamp from 'components/Timestamp';
-
 import DarkModeIcon from './icons/dark-mode.svg';
 import TwitterIcon from './icons/twitter.svg';
 import GithubIcon from './icons/github.svg';
@@ -17,10 +15,8 @@ const footerIconStyles = tw`fill-current text-gray-400`;
 
 export const Header = ({ emoji }) => (
   <header tw="font-sans text-xs text-gray-500 mb-8">
-    <Link href="/">
-      <a>David Furnes</a>
-    </Link>{' '}
-    is a software engineer based in Brooklyn, New York. {emoji}
+    <Link href="/">David Furnes</Link> is a software engineer based in Brooklyn,
+    New York. {emoji}
   </header>
 );
 
@@ -55,7 +51,7 @@ export const Footer = () => (
           Icon={TwitterIcon}
           title="@dfurnes on Twitter"
           href="https://twitter.com/dfurnes"
-          styles={tw`hover:text-blue-500`}
+          css={tw`hover:text-blue-500`}
         />
       </li>
       <li tw="float-left mr-3">
@@ -63,7 +59,7 @@ export const Footer = () => (
           Icon={GithubIcon}
           title="@dfurnes on GitHub"
           href="https://github.com/dfurnes"
-          styles={tw`hover:text-black dark:hover:text-white`}
+          css={tw`hover:text-black dark:hover:text-white`}
         />
       </li>
       <li tw="float-left mr-3">
@@ -71,7 +67,7 @@ export const Footer = () => (
           Icon={KeyIcon}
           title="@dfurnes on Keybase"
           href="https://keybase.io/dfurnes"
-          styles={tw`hover:text-yellow-400`}
+          css={tw`hover:text-yellow-400`}
         />
       </li>
       <li tw="float-right ml-3">

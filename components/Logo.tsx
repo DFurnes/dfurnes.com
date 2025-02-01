@@ -19,12 +19,14 @@ const ConfettiCannon = styled.div`
 `;
 
 export default function Logo() {
-  const el = useRef(null);
+  const el = useRef<HTMLDivElement>(null);
 
   const onClick = (e: React.MouseEvent) => {
     e.preventDefault();
 
-    confetti(el.current, SURPRISE);
+    if (el.current) {
+      confetti(el.current, SURPRISE);
+    }
   };
 
   return (
